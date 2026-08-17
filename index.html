@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUXOR | Explore the World with Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-container">
+      <div class="hero-inner">
+        
+        <!-- Top Navigation Bar -->
+        <header class="hero-navbar">
+          <!-- Logo -->
+          <a href="#" class="brand-logo" id="brandLogo">
+            <span class="logo-icon-wrap">
+              <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#00D26A" />
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#0c1e14" opacity="0.3"/>
+                <path d="M17 11.5L8.5 7.5L10 11.5L7 13.5L10 14L8.5 17.5L17 11.5Z" fill="#ffffff"/>
+              </svg>
+            </span>
+            <span class="brand-name">LUXOR</span>
+          </a>
+
+          <!-- Center Pill Menu -->
+          <nav class="nav-pill-menu" aria-label="Main Navigation">
+            <a href="#home" class="nav-link active" id="navHome">Home</a>
+            <a href="#vehicles" class="nav-link" id="navVehicles">Vehicles</a>
+            <a href="#campsites" class="nav-link" id="navCampsites">Campsites</a>
+            <a href="#contact" class="nav-link" id="navContact">Contact</a>
+          </nav>
+
+          <!-- Right Action Controls -->
+          <div class="nav-actions">
+            <button class="icon-btn search-btn" id="searchBtn" aria-label="Search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+            
+            <a href="#profile" class="user-avatar-link" id="userProfile">
+              <img src="assets/campsite/avatar.jpg" alt="User Profile" class="user-avatar" />
+            </a>
+          </div>
+        </header>
+
+        <!-- Hero Content (Headline + Subtitle + Hotspot) -->
+        <div class="hero-body">
+          <div class="hero-text-content">
+            <h1 class="hero-title">
+              Explore the<br>
+              World with Us!
+            </h1>
+            <p class="hero-subtitle">India's premium luxury travel experience</p>
+          </div>
+
+          <!-- Pure Minimalist Floating Hero Hotspot Bubble (48px × 48px Glassmorphism Marker) -->
+          <div class="hero-floating-hotspot" id="heroPorscheHotspot" role="button" aria-label="Vehicle Hotspot">
+            <div class="hero-hotspot-glass">
+              <span class="hero-hotspot-white-dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Middle Bottom Floating Elements (Positioned cleanly inside Hero Inner) -->
+        <div class="hero-floating-footer hero-footer-centered">
+          
+          <!-- Pure Black & White Monochrome Booking Widget (Compact with Green Accent Icons) -->
+          <div class="booking-widget monochrome-widget compact-widget" id="bookingWidget">
+            
+            <!-- Top Segmented Mode Selector: [ campsite ] [ Vehicle ] -->
+            <div class="mode-selector-container">
+              <div class="mode-selector-pill" role="tablist">
+                <button type="button" class="mode-tab-btn active" id="tabRoom" data-mode="room" role="tab" aria-selected="true">
+                  <svg class="mode-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/>
+                  </svg>
+                  <span>campsite</span>
+                </button>
+                
+                <button type="button" class="mode-tab-btn" id="tabVehicle" data-mode="vehicle" role="tab" aria-selected="false">
+                  <svg class="mode-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                    <circle cx="7" cy="17" r="2"/>
+                    <path d="M9 17h6"/>
+                    <circle cx="17" cy="17" r="2"/>
+                  </svg>
+                  <span>Vehicle</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Panel: CAMPSITE BOOKING MODE (Green Accented) -->
+            <div class="booking-panel active" id="roomModePanel" role="tabpanel">
+              <!-- Search destination row -->
+              <div class="room-search-row">
+                <div class="room-search-input-box">
+                  <svg class="input-icon-pin icon-green" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <input type="text" class="room-search-input" id="roomDestInput" placeholder="Type your destination" />
+                </div>
+                <button type="button" class="room-search-btn" id="roomSearchBtn" aria-label="Search">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Bottom Room Filters Row with Green Icons -->
+              <div class="room-bottom-filters">
+                <div class="room-filter-col">
+                  <span class="filter-col-label">ROOMS</span>
+                  <div class="filter-pill-btn">
+                    <svg class="icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></svg>
+                    <span class="pill-text">2</span>
+                    <span class="pill-arrow">˅</span>
+                  </div>
+                </div>
+
+                <div class="room-filter-col">
+                  <span class="filter-col-label">ADULTS</span>
+                  <div class="filter-pill-btn">
+                    <svg class="icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span class="pill-text">2</span>
+                    <span class="pill-arrow">˅</span>
+                  </div>
+                </div>
+
+                <div class="room-filter-col">
+                  <span class="filter-col-label">KIDS</span>
+                  <div class="filter-pill-btn">
+                    <svg class="icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2"><circle cx="12" cy="8" r="3"></circle><path d="M6 21v-2a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2"></path></svg>
+                    <span class="pill-text">0</span>
+                    <span class="pill-arrow">˅</span>
+                  </div>
+                </div>
+
+                <div class="vertical-sep"></div>
+
+                <div class="room-filter-col date-col">
+                  <span class="filter-col-label">CHECK IN</span>
+                  <div class="filter-pill-btn">
+                    <svg class="icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span class="pill-text date-val">SEP 6, 2028</span>
+                  </div>
+                </div>
+
+                <div class="room-filter-col date-col">
+                  <span class="filter-col-label">CHECK OUT</span>
+                  <div class="filter-pill-btn">
+                    <svg class="icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span class="pill-text date-val">SEP 12, 2028</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Panel: VEHICLE BOOKING MODE (Landscape Interactive Mode) -->
+            <div class="booking-panel" id="vehicleModePanel" role="tabpanel">
+              <!-- Row 1: Pickup Location, Drop-off Location, Pickup Date, Drop-off Date -->
+              <div class="vehicle-top-grid">
+                <!-- 1. Pickup Location -->
+                <div class="veh-field-group">
+                  <label class="veh-field-label" for="pickupLoc">PICKUP LOCATION</label>
+                  <div class="veh-input-pill loc-dropdown-trigger">
+                    <svg class="veh-field-icon icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <input type="text" id="pickupLoc" class="veh-text-input" placeholder="Type pickup location" autocomplete="off" value="Downtown Terminal, City Center" />
+                    <div class="loc-suggestions-box" id="pickupSuggestions">
+                      <div class="suggestion-item">📍 Downtown Terminal, City Center</div>
+                      <div class="suggestion-item">📍 International Airport (Terminal 1)</div>
+                      <div class="suggestion-item">📍 123 Anywhere St., Any City</div>
+                      <div class="suggestion-item">📍 Luxury Grand Marina Hotel</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Drop-off Location -->
+                <div class="veh-field-group">
+                  <label class="veh-field-label" for="dropoffLoc">DROP-OFF LOCATION</label>
+                  <div class="veh-input-pill loc-dropdown-trigger">
+                    <svg class="veh-field-icon icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <input type="text" id="dropoffLoc" class="veh-text-input" placeholder="Type drop-off location" autocomplete="off" value="123 Anywhere St., Any City" />
+                    <div class="loc-suggestions-box" id="dropoffSuggestions">
+                      <div class="suggestion-item">📍 Same as Pickup Location</div>
+                      <div class="suggestion-item">📍 Downtown Terminal, City Center</div>
+                      <div class="suggestion-item">📍 International Airport (Terminal 2)</div>
+                      <div class="suggestion-item">📍 123 Anywhere St., Any City</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Pickup Date -->
+                <div class="veh-field-group date-col">
+                  <label class="veh-field-label" for="pickupDate">PICKUP DATE</label>
+                  <div class="veh-input-pill date-input-wrapper" id="pickupDateBox">
+                    <svg class="veh-field-icon icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <input type="date" id="pickupDate" class="native-date-input" />
+                    <span class="date-display-text" id="pickupDateText">Dec 26, 2028</span>
+                  </div>
+                </div>
+
+                <!-- 4. Drop-off Date -->
+                <div class="veh-field-group date-col">
+                  <label class="veh-field-label" for="dropoffDate">DROP-OFF DATE</label>
+                  <div class="veh-input-pill date-input-wrapper" id="dropoffDateBox">
+                    <svg class="veh-field-icon icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <input type="date" id="dropoffDate" class="native-date-input" />
+                    <span class="date-display-text" id="dropoffDateText">Dec 30, 2028</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 2: Vehicle Type Dropdown & Find Vehicle Search Button -->
+              <div class="vehicle-bottom-grid">
+                <!-- 5. Vehicle Type Dropdown -->
+                <div class="veh-field-group type-select-col">
+                  <label class="veh-field-label">VEHICLE TYPE</label>
+                  <div class="veh-type-dropdown-container" id="vehicleTypeContainer">
+                    <button type="button" class="veh-type-trigger-btn" id="vehicleTypeBtn" aria-haspopup="listbox" aria-expanded="false">
+                      <div class="veh-type-current">
+                        <svg class="veh-inline-icon icon-green" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                          <circle cx="7" cy="17" r="2"/>
+                          <path d="M9 17h6"/>
+                          <circle cx="17" cy="17" r="2"/>
+                        </svg>
+                        <span id="vehicleTypeLabel">5 Seater</span>
+                      </div>
+                      <span class="dropdown-chevron-symbol">˅</span>
+                    </button>
+
+                    <!-- Dropdown Menu with checkmark & options -->
+                    <div class="veh-type-menu" id="vehicleTypeMenu" role="listbox">
+                      <div class="veh-menu-option selected" data-type="5 Seater" role="option" aria-selected="true">
+                        <span class="opt-check">✓</span>
+                        <span class="opt-label">5 Seater</span>
+                      </div>
+                      <div class="veh-menu-option" data-type="7 Seater" role="option" aria-selected="false">
+                        <span class="opt-check">✓</span>
+                        <span class="opt-label">7 Seater</span>
+                      </div>
+                      <div class="veh-menu-option" data-type="Van" role="option" aria-selected="false">
+                        <span class="opt-check">✓</span>
+                        <span class="opt-label">Van</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. Search Button (Black pill with white text & search icon) -->
+                <div class="veh-search-action-col">
+                  <button type="button" class="find-vehicle-submit-btn" id="findVehicleSubmitBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Find Vehicle</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Campsite & Villa Preview Card -->
+          <div class="campsite-widget">
+            <div class="campsite-main-img-wrap">
+              <img src="assets/campsite/resort_villa.jpg" alt="Tropical Villa Resort" class="campsite-main-img" />
+            </div>
+
+            <div class="campsite-content-col">
+              <a href="#explore" class="explore-pill-btn" id="exploreBtn">
+                <span>Explore more</span>
+                <span class="compass-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                  </svg>
+                </span>
+              </a>
+
+              <div class="campsite-thumb-wrap">
+                <img src="assets/campsite/resort_beach.jpg" alt="Beachfront Camp" class="campsite-thumb-img" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CAR CATALOGUE SECTION (Exact Reference Design, Full Width) ==================== -->
+    <section class="catalogue-section" id="vehicles">
+      
+      <!-- Catalogue Header -->
+      <div class="catalogue-header">
+        <div class="catalogue-title-wrap">
+          <h2 class="catalogue-title">CAR CATALOGUE</h2>
+        </div>
+
+        <!-- Filter Buttons Bar (Pills on Right with Dropdowns & Search Icon) -->
+        <div class="catalogue-filters">
+          
+          <!-- Search Box / Icon -->
+          <div class="cat-search-box" id="catSearchBox">
+            <svg class="cat-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="cat-search-input" id="catSearchInput" placeholder="Search cars..." />
+          </div>
+
+          <div class="cat-filter-wrapper" id="filterPriceWrapper">
+            <button type="button" class="cat-filter-btn" id="filterPriceBtn">
+              <span>Price</span>
+              <span class="filter-chevron">˅</span>
+            </button>
+            <div class="filter-dropdown-menu" id="filterPriceMenu">
+              <div class="filter-option selected" data-sort="default">Default Order</div>
+              <div class="filter-option" data-sort="low-high">Price: Low to High</div>
+              <div class="filter-option" data-sort="high-low">Price: High to Low</div>
+            </div>
+          </div>
+
+          <div class="cat-filter-wrapper" id="filterManufactureWrapper">
+            <button type="button" class="cat-filter-btn" id="filterManufactureBtn">
+              <span>Manufacture</span>
+              <span class="cat-badge badge-orange" id="makeBadge">5</span>
+              <span class="filter-chevron">˅</span>
+            </button>
+            <div class="filter-dropdown-menu" id="filterManufactureMenu">
+              <div class="filter-option selected" data-make="all">All Brands (5)</div>
+              <div class="filter-option" data-make="toyota">Toyota</div>
+              <div class="filter-option" data-make="honda">Honda</div>
+              <div class="filter-option" data-make="pajero">Mitsubishi / Pajero</div>
+              <div class="filter-option" data-make="bmw">BMW</div>
+            </div>
+          </div>
+
+          <div class="cat-filter-wrapper" id="filterTypeWrapper">
+            <button type="button" class="cat-filter-btn" id="filterTypeBtn">
+              <span>Type</span>
+              <span class="cat-badge badge-orange" id="typeBadge">4</span>
+              <span class="filter-chevron">˅</span>
+            </button>
+            <div class="filter-dropdown-menu" id="filterTypeMenu">
+              <div class="filter-option selected" data-type="all">All Types</div>
+              <div class="filter-option" data-type="suv">SUV / Cross</div>
+              <div class="filter-option" data-type="sedan">Sedan</div>
+              <div class="filter-option" data-type="hatchback">Hatchback</div>
+              <div class="filter-option" data-type="van">Van</div>
+            </div>
+          </div>
+
+          <div class="cat-filter-wrapper" id="filterRatingWrapper">
+            <button type="button" class="cat-filter-btn" id="filterRatingBtn">
+              <span>Rating</span>
+              <span class="filter-chevron">˅</span>
+            </button>
+            <div class="filter-dropdown-menu" id="filterRatingMenu">
+              <div class="filter-option selected" data-rating="all">All Ratings</div>
+              <div class="filter-option" data-rating="4.8">★ 4.8 & Above</div>
+              <div class="filter-option" data-rating="4.5">★ 4.5 & Above</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car Catalogue Grid (Exact 4-Column Layout, Price Tags Removed) -->
+      <div class="catalogue-grid" id="catalogueGrid">
+
+        <!-- Card 1: Toyota New Yaris -->
+        <div class="catalogue-card" data-make="toyota" data-type="suv" data-price="42" data-rating="4.7">
+          <div class="card-top-info">
+            <h3 class="card-car-name">Toyota New Yaris</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/toyota_yaris_orange.png" alt="Toyota New Yaris" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Manual</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>5 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>24 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+        <!-- Card 2: Pajero Sport -->
+        <div class="catalogue-card" data-make="pajero" data-type="suv" data-price="46" data-rating="4.8">
+          <div class="card-top-info">
+            <h3 class="card-car-name">Pajero Sport</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/pajero_sport_white.png" alt="Pajero Sport" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Manual</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>5 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>34 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+        <!-- Card 3: Honda Civic -->
+        <div class="catalogue-card" data-make="honda" data-type="sedan" data-price="52" data-rating="4.9">
+          <div class="card-top-info">
+            <h3 class="card-car-name">Honda Civic</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/honda_civic_red.png" alt="Honda Civic" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Auto</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>5 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>28 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+        <!-- Card 4: Innova Crysta (Using requested innova crysta.png) -->
+        <div class="catalogue-card" data-make="toyota" data-type="van" data-price="54" data-rating="4.9">
+          <div class="card-top-info">
+            <h3 class="card-car-name">Innova Crysta</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/innova crysta.png" alt="Innova Crysta" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Auto</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>7 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>32 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+        <!-- Card 5: Toyota HiAce Van (Using requested toyota van.png) -->
+        <div class="catalogue-card" data-make="toyota" data-type="van" data-price="56" data-rating="4.8">
+          <div class="card-top-info">
+            <h3 class="card-car-name">Toyota HiAce Van</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/toyota van.png" alt="Toyota HiAce Van" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Manual</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>10 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>26 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+        <!-- Card 6: Honda Jazz RS (Active selected state from reference image) -->
+        <div class="catalogue-card active-card" data-make="honda" data-type="hatchback" data-price="58" data-rating="4.9">
+          <div class="card-top-info">
+            <h3 class="card-car-name">Honda Jazz RS</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/honda_jazz_blue.png" alt="Honda Jazz RS" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Auto</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>5 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>36 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn show-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+        <!-- Card 7: BMW 3 Series Sedan -->
+        <div class="catalogue-card" data-make="bmw" data-type="sedan" data-price="60" data-rating="5.0">
+          <div class="card-top-info">
+            <h3 class="card-car-name">BMW 3 Series</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/luxor_hero_car.png" alt="BMW 3 Series" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Auto</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>5 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>30 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+        <!-- Card 8: Toyota Urban Cross -->
+        <div class="catalogue-card" data-make="toyota" data-type="suv" data-price="63" data-rating="4.8">
+          <div class="card-top-info">
+            <h3 class="card-car-name">Toyota Urban Cross</h3>
+          </div>
+          <div class="card-image-wrap">
+            <img src="assets/car/toyota_yaris_orange.png" alt="Toyota Urban Cross" class="card-car-img" />
+          </div>
+          <div class="card-footer-specs">
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M12 12 2 12"/><path d="m12 12 7.07 7.07"/></svg>
+              <span>Manual</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"/><path d="M5 18h8"/></svg>
+              <span>8 Seats</span>
+            </div>
+            <div class="spec-item">
+              <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12M4 9h10M4 5h10a2 2 0 0 1 2 2v15H2V7a2 2 0 0 1 2-2Z"/><path d="M18 10h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/></svg>
+              <span>34 MPG</span>
+            </div>
+          </div>
+          <button type="button" class="card-rent-btn">
+            <span>Rent Now</span>
+            <span class="rent-arrow-circle">→</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Explore More Button (Pixel-Bolt Aesthetic, Bottom Right on Desktop, Centered on Mobile) -->
+      <div class="catalogue-footer-action">
+        <a href="#explore" class="pixel-explore-btn" id="pixelExploreBtn">
+          <span class="pixel-btn-text">EXPLORE MORE</span>
+          <span class="pixel-dot"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== CAMPSITES & LUXURY STAYS SECTION (5 Kerala Campsite Images) ==================== -->
+    <section class="campsites-section" id="campsites">
+      <div class="campsites-header">
+        <div class="campsites-title-wrap">
+          <h2 class="campsites-title">CAMPSITES & LUXURY STAYS</h2>
+        </div>
+      </div>
+
+      <div class="campsites-grid campsites-grid-5">
+
+        <!-- Card 1: Alleppey Backwater Campsite -->
+        <div class="campsite-hero-card">
+          <img src="assets/campsite/alleppy campsite.png" alt="Alleppey Backwater Campsite" class="campsite-hero-img" />
+          <button type="button" class="campsite-heart-btn" aria-label="Favorite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <div class="campsite-overlay-content">
+            <div class="campsite-loc-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Alleppey, Kerala</span>
+            </div>
+            <div class="campsite-title-price-row">
+              <h3 class="campsite-title-text">Alleppey Backwater<br>Luxury Retreat</h3>
+              <div class="campsite-rate-box">
+                <span class="rate-currency">$145</span>
+                <span class="rate-period">/night</span>
+              </div>
+            </div>
+            <div class="campsite-capsules-row">
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>4.9</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z"></path><path d="M6 11V6a3 3 0 0 1 6 0v5"></path></svg>
+                <span>2 Bath</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg>
+                <span>2 Bedrooms</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                <span>4 Guest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Munnar Campsite -->
+        <div class="campsite-hero-card">
+          <img src="assets/campsite/munnar campsite.png" alt="Munnar Campsite" class="campsite-hero-img" />
+          <button type="button" class="campsite-heart-btn" aria-label="Favorite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <div class="campsite-overlay-content">
+            <div class="campsite-loc-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Munnar, Kerala</span>
+            </div>
+            <div class="campsite-title-price-row">
+              <h3 class="campsite-title-text">Munnar Misty Hills<br>Glamping Dome</h3>
+              <div class="campsite-rate-box">
+                <span class="rate-currency">$185</span>
+                <span class="rate-period">/night</span>
+              </div>
+            </div>
+            <div class="campsite-capsules-row">
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>4.8</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z"></path><path d="M6 11V6a3 3 0 0 1 6 0v5"></path></svg>
+                <span>2 Bath</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg>
+                <span>3 Bedrooms</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                <span>5 Guest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Wayanad Hillstay -->
+        <div class="campsite-hero-card">
+          <img src="assets/campsite/hillstay.png" alt="Wayanad Hillstay" class="campsite-hero-img" />
+          <button type="button" class="campsite-heart-btn" aria-label="Favorite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <div class="campsite-overlay-content">
+            <div class="campsite-loc-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Wayanad, Kerala</span>
+            </div>
+            <div class="campsite-title-price-row">
+              <h3 class="campsite-title-text">Wayanad Rainforest<br>Hillstay & Treehouse</h3>
+              <div class="campsite-rate-box">
+                <span class="rate-currency">$195</span>
+                <span class="rate-period">/night</span>
+              </div>
+            </div>
+            <div class="campsite-capsules-row">
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>4.9</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z"></path><path d="M6 11V6a3 3 0 0 1 6 0v5"></path></svg>
+                <span>3 Bath</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg>
+                <span>4 Bedrooms</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                <span>6 Guest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Vagamon Mountain Stay -->
+        <div class="campsite-hero-card">
+          <img src="assets/campsite/mountain stay.png" alt="Vagamon Mountain Stay" class="campsite-hero-img" />
+          <button type="button" class="campsite-heart-btn" aria-label="Favorite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <div class="campsite-overlay-content">
+            <div class="campsite-loc-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Vagamon, Kerala</span>
+            </div>
+            <div class="campsite-title-price-row">
+              <h3 class="campsite-title-text">Vagamon Mountain<br>Pine Cliff Stay</h3>
+              <div class="campsite-rate-box">
+                <span class="rate-currency">$160</span>
+                <span class="rate-period">/night</span>
+              </div>
+            </div>
+            <div class="campsite-capsules-row">
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>4.7</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z"></path><path d="M6 11V6a3 3 0 0 1 6 0v5"></path></svg>
+                <span>2 Bath</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg>
+                <span>2 Bedrooms</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                <span>4 Guest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Varkala Cliff Beach Resort -->
+        <div class="campsite-hero-card">
+          <img src="assets/campsite/resort_beach.jpg" alt="Varkala Cliff Beach Resort" class="campsite-hero-img" />
+          <button type="button" class="campsite-heart-btn" aria-label="Favorite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <div class="campsite-overlay-content">
+            <div class="campsite-loc-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Varkala, Kerala</span>
+            </div>
+            <div class="campsite-title-price-row">
+              <h3 class="campsite-title-text">Varkala Cliffside<br>Beachfront Sanctuary</h3>
+              <div class="campsite-rate-box">
+                <span class="rate-currency">$210</span>
+                <span class="rate-period">/night</span>
+              </div>
+            </div>
+            <div class="campsite-capsules-row">
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>4.8</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z"></path><path d="M6 11V6a3 3 0 0 1 6 0v5"></path></svg>
+                <span>2 Bath</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg>
+                <span>3 Bedrooms</span>
+              </div>
+              <div class="campsite-glass-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                <span>5 Guest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== KERALA STORIES & CLIENT REVIEWS (Floating Overlapping Editorial Carousel) ==================== -->
+    <section class="kerala-blog-section" id="stories">
+      <div class="kerala-blog-header">
+        <div class="kerala-blog-title-wrap">
+          <h2 class="kerala-blog-title">KERALA STORIES & CLIENT EXPERIENCES</h2>
+        </div>
+        
+        <!-- Minimal Carousel Arrows Navigation -->
+        <div class="kerala-nav-arrows">
+          <button type="button" class="kerala-arrow-btn" id="keralaPrevBtn" aria-label="Previous Stories">←</button>
+          <button type="button" class="kerala-arrow-btn" id="keralaNextBtn" aria-label="Next Stories">→</button>
+        </div>
+      </div>
+
+      <!-- Overlapping Floating Editorial Showcase Track -->
+      <div class="kerala-showcase-container">
+        <div class="kerala-showcase-track" id="keralaShowcaseTrack">
+
+          <!-- Slide 1: Alleppey Backwaters & Rahul & Ananya Nair Review -->
+          <div class="kerala-slide slide-tall">
+            <div class="kerala-slide-img-box">
+              <img src="assets/campsite/alleppy campsite.png" alt="Alleppey Backwater Journey" class="kerala-bg-photo" />
+            </div>
+
+            <!-- Overlapping Floating White Review Card -->
+            <div class="kerala-floating-card offset-card-1">
+              <div class="kerala-card-top-row">
+                <span class="kerala-tag">Alleppey Expedition</span>
+                <div class="kerala-icons-cluster">
+                  <span class="kerala-circle-icon">✈️</span>
+                  <span class="kerala-circle-icon">🌐</span>
+                </div>
+              </div>
+
+              <h4 class="kerala-review-title">Luxury Houseboat & Self-Drive Tour across Kerala Backwaters</h4>
+              
+              <p class="kerala-review-quote">
+                “Renting the luxury Innova from LUXOR for our Alleppey and Kumarakom family vacation was an absolute dream. Pristine vehicle, prompt support, and unmatched comfort.”
+              </p>
+
+              <div class="kerala-client-footer">
+                <div class="kerala-client-info">
+                  <span class="kerala-client-name">Rahul & Ananya Nair</span>
+                  <span class="kerala-client-city">Kochi, Kerala</span>
+                </div>
+                <span class="kerala-rating-star">★★★★★ 5.0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Munnar Tea Gardens & Dr. Midhun Thomas Review -->
+          <div class="kerala-slide slide-medium">
+            <div class="kerala-slide-img-box">
+              <img src="assets/campsite/munnar campsite.png" alt="Munnar Tea Hills" class="kerala-bg-photo" />
+            </div>
+
+            <!-- Overlapping Floating White Review Card -->
+            <div class="kerala-floating-card offset-card-2">
+              <div class="kerala-card-top-row">
+                <span class="kerala-tag">Highland Tea Trails</span>
+                <div class="kerala-icons-cluster">
+                  <span class="kerala-circle-icon">⭐</span>
+                  <span class="kerala-circle-icon">⏱️</span>
+                </div>
+              </div>
+
+              <h4 class="kerala-review-title">Munnar Mountain Glamping with Private Campfire & 4x4 Chauffeur</h4>
+              
+              <p class="kerala-review-quote">
+                “Waking up to the morning mist over Munnar's tea hills in LUXOR’s glamping dome was breathtaking. Flawless 4x4 booking and hospitality throughout.”
+              </p>
+
+              <div class="kerala-client-footer">
+                <div class="kerala-client-info">
+                  <span class="kerala-client-name">Dr. Midhun Thomas</span>
+                  <span class="kerala-client-city">Trivandrum, Kerala</span>
+                </div>
+                <span class="kerala-rating-star">★★★★★ 5.0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Varkala Cliff Coast & Fathima & Haris Review -->
+          <div class="kerala-slide slide-landscape">
+            <div class="kerala-slide-img-box">
+              <img src="assets/campsite/resort_beach.jpg" alt="Varkala Cliff Coast" class="kerala-bg-photo" />
+            </div>
+
+            <!-- Overlapping Floating White Review Card -->
+            <div class="kerala-floating-card offset-card-3">
+              <div class="kerala-card-top-row">
+                <span class="kerala-tag">Coastal Cliffline Escape</span>
+                <div class="kerala-icons-cluster">
+                  <span class="kerala-circle-icon">📍</span>
+                  <span class="kerala-circle-icon">🌊</span>
+                </div>
+              </div>
+
+              <h4 class="kerala-review-title">Varkala Cliffside Private Villa & Coastal Sunset Self-Drive</h4>
+              
+              <p class="kerala-review-quote">
+                “Best luxury travel service in Kerala. Clean transparent car rentals, stunning coastal resorts, and 24/7 dedicated support.”
+              </p>
+
+              <div class="kerala-client-footer">
+                <div class="kerala-client-info">
+                  <span class="kerala-client-name">Fathima & Haris</span>
+                  <span class="kerala-client-city">Calicut, Kerala</span>
+                </div>
+                <span class="kerala-rating-star">★★★★★ 5.0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Wayanad Rainforest & Siddharth & Deepa Review -->
+          <div class="kerala-slide slide-tall">
+            <div class="kerala-slide-img-box">
+              <img src="assets/campsite/hillstay.png" alt="Wayanad Rainforest Sanctuary" class="kerala-bg-photo" />
+            </div>
+
+            <!-- Overlapping Floating White Review Card -->
+            <div class="kerala-floating-card offset-card-4">
+              <div class="kerala-card-top-row">
+                <span class="kerala-tag">Rainforest Sanctuary</span>
+                <div class="kerala-icons-cluster">
+                  <span class="kerala-circle-icon">🌿</span>
+                  <span class="kerala-circle-icon">🏕️</span>
+                </div>
+              </div>
+
+              <h4 class="kerala-review-title">Wayanad Deep Forest Treehouse & Off-Road Wilderness Safari</h4>
+              
+              <p class="kerala-review-quote">
+                “Pure wilderness luxury in the Western Ghats. The Pajero booking and eco-stay coordination was world-class.”
+              </p>
+
+              <div class="kerala-client-footer">
+                <div class="kerala-client-info">
+                  <span class="kerala-client-name">Siddharth & Deepa</span>
+                  <span class="kerala-client-city">Thrissur, Kerala</span>
+                </div>
+                <span class="kerala-rating-star">★★★★★ 5.0</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CLEAN CARD FOOTER (Nexiron-style Theme) ==================== -->
+    <footer class="clean-card-footer">
+      <div class="footer-card-box">
+        
+        <div class="footer-main-row">
+          <!-- Left Brand Column -->
+          <div class="footer-left-col">
+            <a href="#home" class="footer-brand-title">
+              <span class="footer-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </span>
+              <span class="footer-brand-name">LUXOR</span>
+            </a>
+            
+            <p class="footer-short-desc">
+              LUXOR helps travelers discover luxury vehicle rentals and pristine Kerala campsites — everything you need in one place.
+            </p>
+          </div>
+
+          <!-- Right Navigation Columns (Quick Links Only) -->
+          <div class="footer-right-cols">
+            
+            <div class="footer-nav-col">
+              <h4 class="footer-nav-heading">Quick Links</h4>
+              <ul class="footer-clean-links">
+                <li><a href="#vehicles">Vehicles</a></li>
+                <li><a href="#campsites">Campsites</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#vehicles">Bookings</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-nav-col">
+              <h4 class="footer-nav-heading">Resources</h4>
+              <ul class="footer-clean-links">
+                <li><a href="#campsites">Itineraries</a></li>
+                <li><a href="#vehicles">Chauffeur</a></li>
+                <li><a href="tel:+919847000000">Road Assistance</a></li>
+                <li><a href="mailto:concierge@luxor.in">Concierge</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-nav-col">
+              <h4 class="footer-nav-heading">Company</h4>
+              <ul class="footer-clean-links">
+                <li><a href="#home">About</a></li>
+                <li><a href="#stories">Experiences</a></li>
+                <li><a href="#home">Contact</a></li>
+                <li><a href="#home">Partners</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Border Row -->
+        <div class="footer-bottom-bar">
+          <p class="footer-copy-text">© 2026 LUXOR Pvt Ltd. All rights reserved.</p>
+          
+          <div class="footer-legal-bar">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Interactive Rent Booking Modal -->
+    <div class="rent-modal-overlay" id="rentModalOverlay">
+      <div class="rent-modal-card" id="rentModalCard">
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">×</button>
+        
+        <div class="modal-header">
+          <span class="modal-badge">VEHICLE RESERVATION</span>
+          <h3 class="modal-car-name" id="modalCarName">Honda Jazz RS</h3>
+        </div>
+
+        <div class="modal-car-preview">
+          <img src="assets/car/honda_jazz_blue.png" alt="Selected Car Preview" id="modalCarImg" class="modal-car-img" />
+        </div>
+
+        <div class="modal-specs-row" id="modalSpecsRow">
+          <div class="modal-spec-pill">⚙️ <span id="modalSpecTrans">Auto</span></div>
+          <div class="modal-spec-pill">💺 <span id="modalSpecSeats">5 Seats</span></div>
+          <div class="modal-spec-pill">⛽ <span id="modalSpecFuel">36 MPG</span></div>
+        </div>
+
+        <div class="modal-form-grid">
+          <div class="modal-field">
+            <label class="modal-label">PICKUP LOCATION</label>
+            <input type="text" class="modal-input" value="Downtown Terminal, City Center" />
+          </div>
+          <div class="modal-field">
+            <label class="modal-label">RENTAL DURATION</label>
+            <select class="modal-input">
+              <option>3 Days Rental</option>
+              <option selected>5 Days Rental</option>
+              <option>7 Days Rental (10% Off)</option>
+              <option>14 Days Rental (20% Off)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="button" class="modal-confirm-btn" id="modalConfirmBtn">
+          <span>Confirm Reservation</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Floating Bottom Navigation Bar (Shown strictly on scroll down) -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation">
+      <!-- 1. Home -->
+      <a href="#home" class="mob-nav-item active" aria-label="Home">
+        <div class="mob-nav-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 2. Campsites / Camp -->
+      <a href="#campsites" class="mob-nav-item" aria-label="Campsites">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21 12 4 5 21"></path>
+          <path d="M12 4v17"></path>
+          <path d="m5 21 7-7 7 7"></path>
+        </svg>
+      </a>
+
+      <!-- 3. Vehicles / Car -->
+      <a href="#vehicles" class="mob-nav-item" aria-label="Vehicles">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+          <circle cx="7" cy="17" r="2"/>
+          <path d="M9 17h6"/>
+          <circle cx="17" cy="17" r="2"/>
+        </svg>
+      </a>
+
+      <!-- 4. Bookings / Receipts -->
+      <a href="#bookings" class="mob-nav-item" aria-label="Bookings">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <line x1="10" y1="9" x2="8" y2="9"></line>
+        </svg>
+      </a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

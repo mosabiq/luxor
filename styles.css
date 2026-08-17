@@ -1,0 +1,2691 @@
+/* ==========================================================================
+   LUXOR - MODERN LUXURY TRAVEL & VEHICLES
+   Pixel-Perfect Layout & Styling
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-main: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-page: #ffffff;
+  --card-bg: #ececec;
+  --card-border: #ffffff;
+  --accent-green: #00d26a;
+  --accent-green-hover: #00b85c;
+  --dark-pill: #161616;
+  --text-dark: #121212;
+  --text-muted: #666666;
+  --pill-bg: rgba(240, 240, 240, 0.9);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #ffffff;
+  color: var(--text-dark);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 20px 0 60px;
+}
+
+.site-wrapper {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   HERO CONTAINER
+   ========================================================================== */
+.hero-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 110px;
+}
+
+.hero-inner {
+  position: relative;
+  width: 100%;
+  min-height: 660px;
+  border-radius: 44px;
+  background: url('tuxtor car hero.png') no-repeat center center;
+  background-size: cover;
+  overflow: visible;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Dark gradient overlay for text readability */
+.hero-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 36px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.25) 45%,
+    rgba(0, 0, 0, 0.05) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   TOP NAVIGATION BAR
+   ========================================================================== */
+.hero-navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 34px;
+}
+
+/* Logo */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon-wrap {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Center Pill Menu */
+.nav-pill-menu {
+  display: flex;
+  align-items: center;
+  background: rgba(240, 240, 240, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 999px;
+  padding: 5px 6px;
+  gap: 2px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.nav-link.active {
+  background: #181818;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover:not(.active) {
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
+}
+
+/* Right Action Controls */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-btn.search-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 210, 106, 0.35);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-btn.search-btn:hover {
+  background: var(--accent-green-hover);
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(0, 210, 106, 0.5);
+}
+
+.user-avatar-link {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.user-avatar-link:hover {
+  transform: scale(1.06);
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   HERO BODY (Headline & Clean Open Landscape)
+   ========================================================================== */
+.hero-inner {
+  position: relative;
+  min-height: 680px;
+  background-image: url('assets/hero/tuxtor car hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 44px;
+  overflow: hidden;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 36px 36px;
+  box-sizing: border-box;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 2;
+  padding: 20px 44px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.hero-text-content {
+  max-width: 580px;
+  padding-top: 10px;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.06;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* ==========================================================================
+   PURE MINIMALIST FLOATING HERO HOTSPOT (48 × 48 px Glassmorphism Marker)
+   ========================================================================== */
+.hero-floating-hotspot {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 12;
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-floating-hotspot:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.hero-hotspot-glass {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(235, 235, 235, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: box-shadow 200ms ease-out, background-color 200ms ease-out;
+}
+
+.hero-floating-hotspot:hover .hero-hotspot-glass {
+  background: rgba(245, 245, 245, 0.88);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero-hotspot-white-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 200ms ease-out;
+}
+
+.hero-floating-hotspot:hover .hero-hotspot-white-dot {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   HERO BOTTOM FOOTER WIDGETS (Contained Cleanly Inside Hero Section)
+   ========================================================================== */
+.hero-floating-footer.hero-footer-centered {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 15;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   COMPACT PURE BLACK & WHITE MONOCHROME BOOKING WIDGET (With Green Accents)
+   ========================================================================== */
+.booking-widget.monochrome-widget {
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 14px 18px 13px;
+  box-shadow: none;
+  width: 100%;
+  max-width: 580px;
+  border: 1.5px solid #ebebeb;
+  transition: all 0.3s ease;
+}
+
+/* Mode Selector Pill [ campsite ] [ Vehicle ] */
+.mode-selector-container {
+  margin-bottom: 10px;
+}
+
+.mode-selector-pill {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #ebebeb;
+  border-radius: 999px;
+  padding: 3px;
+  gap: 3px;
+  box-shadow: none;
+}
+
+.mode-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  color: #111111;
+  box-shadow: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mode-tab-btn .mode-icon {
+  stroke: currentColor;
+  transition: stroke 0.2s ease;
+}
+
+.mode-tab-btn.active {
+  background: #111111;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.mode-tab-btn:hover:not(.active) {
+  background: #f7f7f7;
+  color: #000000;
+}
+
+/* Accent Green Icons (Signature LUXOR Green) */
+.icon-green {
+  stroke: #00D26A !important;
+  color: #00D26A !important;
+}
+
+/* Panels */
+.booking-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.booking-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   ROOM / CAMPSITE MODE PANEL (Compact)
+   ========================================================================== */
+.room-search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.room-search-input-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+.room-search-input-box:focus-within {
+  border-color: #00D26A;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.input-icon-pin {
+  flex-shrink: 0;
+}
+
+.room-search-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  outline: none;
+}
+
+.room-search-input::placeholder {
+  color: #8c8c8c;
+}
+
+.room-search-btn {
+  width: 38px;
+  height: 38px;
+  background: #111111;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.room-search-btn:hover {
+  background: #252525;
+  transform: scale(1.04);
+}
+
+.room-bottom-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.room-filter-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-col-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #6b6b6b;
+  text-transform: uppercase;
+}
+
+.filter-pill-btn {
+  background: #ffffff;
+  border: 1.5px solid #ececec;
+  border-radius: 10px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.filter-pill-btn:hover {
+  border-color: #00D26A;
+  background: #fbfbfb;
+}
+
+.pill-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.pill-text.date-val {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pill-arrow {
+  font-size: 9px;
+  color: #555555;
+  margin-left: 1px;
+}
+
+.vertical-sep {
+  width: 1px;
+  height: 26px;
+  background: #ebebeb;
+  margin: 12px 1px 0;
+}
+
+/* ==========================================================================
+   VEHICLE MODE PANEL (Compact Interactive Form)
+   ========================================================================== */
+.vehicle-top-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.veh-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+
+.veh-field-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #6b6b6b;
+  text-transform: uppercase;
+}
+
+.veh-input-pill {
+  position: relative;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-radius: 999px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.veh-input-pill:focus-within {
+  border-color: #00D26A;
+  background: #ffffff;
+}
+
+.veh-text-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #111111;
+  outline: none;
+}
+
+.date-display-text {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #111111;
+  white-space: nowrap;
+}
+
+.veh-type-trigger-btn {
+  width: 100%;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-radius: 999px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.veh-type-trigger-btn:hover {
+  border-color: #00D26A;
+}
+
+.veh-type-current {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.find-vehicle-submit-btn {
+  height: 36px;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0 20px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.find-vehicle-submit-btn:hover {
+  background: #252525;
+  transform: translateY(-1px);
+}
+
+/* Compact Campsite Widget in Hero */
+.campsite-widget {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 8px 10px;
+  box-shadow: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1.5px solid #ebebeb;
+}
+
+.campsite-main-img-wrap {
+  width: 110px;
+  height: 90px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: none;
+}
+
+.campsite-thumb-wrap {
+  width: 95px;
+  height: 52px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.explore-pill-btn {
+  background: var(--accent-green);
+  color: #061c0e;
+  text-decoration: none;
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.compass-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ==========================================================================
+   VEHICLE MODE PANEL (Interactive Landscape Form)
+   ========================================================================== */
+.vehicle-top-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.4fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.veh-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.veh-field-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #6b6b6b;
+  text-transform: uppercase;
+}
+
+.veh-input-pill {
+  position: relative;
+  background: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  border-radius: 999px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.veh-input-pill:hover,
+.veh-input-pill:focus-within {
+  background: #ffffff;
+  border-color: #111111;
+  box-shadow: 0 0 0 1px #111111;
+}
+
+.veh-field-icon {
+  flex-shrink: 0;
+}
+
+.veh-text-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  outline: none;
+}
+
+.veh-text-input::placeholder {
+  color: #8c8c8c;
+  font-weight: 400;
+}
+
+/* Autocomplete location dropdown */
+.loc-suggestions-box {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  z-index: 50;
+  overflow: hidden;
+}
+
+.loc-suggestions-box.open {
+  display: block;
+  animation: fadeInDown 0.2s ease;
+}
+
+.suggestion-item {
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #222222;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.suggestion-item:hover {
+  background: #f5f5f5;
+  color: #000000;
+}
+
+/* Date input wrapper */
+.date-input-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.native-date-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.date-display-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111111;
+  white-space: nowrap;
+}
+
+/* Vehicle Bottom Grid: Type dropdown & Search Button */
+.vehicle-bottom-grid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.type-select-col {
+  flex: 1;
+  max-width: 320px;
+}
+
+.veh-type-dropdown-container {
+  position: relative;
+}
+
+.veh-type-trigger-btn {
+  width: 100%;
+  background: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  border-radius: 999px;
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.veh-type-trigger-btn:hover {
+  background: #ffffff;
+  border-color: #111111;
+}
+
+.veh-type-current {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.dropdown-chevron-symbol {
+  font-size: 10px;
+  font-weight: 700;
+  color: #111111;
+}
+
+/* Dropdown Menu */
+.veh-type-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  z-index: 50;
+  overflow: hidden;
+}
+
+.veh-type-menu.open {
+  display: block;
+  animation: fadeInDown 0.2s ease;
+}
+
+.veh-menu-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #222222;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.veh-menu-option:hover {
+  background: #f5f5f5;
+}
+
+.veh-menu-option .opt-check {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111111;
+  visibility: hidden;
+}
+
+.veh-menu-option.selected .opt-check {
+  visibility: visible;
+}
+
+.veh-menu-option.selected {
+  font-weight: 600;
+}
+
+/* Find Vehicle Submit Button */
+.veh-search-action-col {
+  flex-shrink: 0;
+}
+
+.find-vehicle-submit-btn {
+  height: 44px;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0 28px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.find-vehicle-submit-btn:hover {
+  background: #252525;
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.find-vehicle-submit-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.meta-pill-date,
+.meta-pill-guests {
+  flex: 1;
+}
+
+/* Right Campsite & Villa Preview Card */
+.campsite-widget {
+  background: #ebebeb;
+  border-radius: 28px;
+  padding: 12px;
+  box-shadow: none;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1.5px solid #dfdfdf;
+}
+
+.campsite-main-img-wrap {
+  width: 155px;
+  height: 125px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: none;
+}
+
+.campsite-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.campsite-widget:hover .campsite-main-img {
+  transform: scale(1.05);
+}
+
+.campsite-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.explore-pill-btn {
+  background: var(--accent-green);
+  color: #061c0e;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.explore-pill-btn:hover {
+  background: var(--accent-green-hover);
+  transform: scale(1.03);
+  box-shadow: none;
+}
+
+.compass-icon {
+  width: 22px;
+  height: 22px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.campsite-thumb-wrap {
+  width: 135px;
+  height: 75px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campsite-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.campsite-widget:hover .campsite-thumb-img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   CAR CATALOGUE SECTION (Exact Reference Design, Full Width)
+   ========================================================================== */
+.catalogue-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 70px 0 110px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Header with Bold Title and Right Filter Pills */
+.catalogue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.catalogue-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #090e1a;
+  margin: 0;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+.catalogue-subtitle {
+  display: none;
+}
+
+.catalogue-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Car Catalogue Search Box */
+.cat-search-box {
+  background: #F4F6F8;
+  border: 1.5px solid #EAECF0;
+  border-radius: 999px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.cat-search-box:focus-within {
+  border-color: #0F172A;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.cat-search-icon {
+  color: #64748B;
+  flex-shrink: 0;
+}
+
+.cat-search-input {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+  outline: none;
+  width: 110px;
+  transition: width 0.25s ease;
+}
+
+.cat-search-input:focus {
+  width: 160px;
+}
+
+.cat-search-input::placeholder {
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.cat-filter-wrapper {
+  position: relative;
+}
+
+.cat-filter-btn {
+  background: #F4F6F8;
+  border: 1.5px solid #EAECF0;
+  border-radius: 999px;
+  padding: 9px 20px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1e293b;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.cat-filter-btn:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.cat-badge.badge-orange {
+  background: #F97316;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-chevron {
+  font-size: 10px;
+  font-weight: 800;
+  color: #64748b;
+  margin-left: 2px;
+}
+
+/* Filter Dropdown Menus */
+.filter-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 175px;
+  background: #ffffff;
+  border: 1.5px solid #EAECF0;
+  border-radius: 16px;
+  padding: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  z-index: 50;
+  display: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.filter-dropdown-menu.open {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.filter-option {
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-option:hover {
+  background: #F4F6F8;
+  color: #090e1a;
+}
+
+.filter-option.selected {
+  background: #EEF2FF;
+  color: #4F46E5;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   CAR CATALOGUE GRID & OFF VERY LIGHT CARD THEME
+   ========================================================================== */
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.catalogue-card {
+  position: relative;
+  background: #F4F6F8;
+  border: 1.5px solid #EAECF0;
+  border-radius: 28px;
+  padding: 24px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.catalogue-card.hidden {
+  display: none !important;
+}
+
+.catalogue-card:hover,
+.catalogue-card.active-card {
+  background: #ffffff;
+  border-color: #5D5FEF;
+  box-shadow: 0 20px 45px rgba(93, 95, 239, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Card Top Info */
+.card-top-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.card-car-name {
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #090e1a;
+  margin: 0;
+  line-height: 1.25;
+  width: 100%;
+  letter-spacing: -0.3px;
+}
+
+/* Card Image Stage */
+.card-image-wrap {
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0 16px;
+  position: relative;
+}
+
+.card-car-img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 125px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.10));
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  user-select: none;
+}
+
+.catalogue-card:hover .card-car-img {
+  transform: scale(1.04);
+}
+
+/* Card Specifications (3 icons + bold labels) */
+.card-footer-specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #E4E7EC;
+  transition: opacity 0.2s ease;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #334155;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.spec-icon {
+  color: #64748b;
+  stroke: #64748b;
+  stroke-width: 2.2;
+}
+
+/* Capsule "Rent Now →" Button */
+.card-rent-btn {
+  display: none;
+  background: #5D5FEF;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 20px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 800;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(93, 95, 239, 0.25);
+  outline: none;
+}
+
+.card-rent-btn:hover {
+  background: #4B4DDF;
+  box-shadow: 0 6px 18px rgba(93, 95, 239, 0.35);
+}
+
+.rent-arrow-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Hover and Active State Toggle between Specs and Rent Button */
+.catalogue-card.active-card .card-footer-specs,
+.catalogue-card:hover .card-footer-specs {
+  display: none;
+}
+
+.catalogue-card.active-card .card-rent-btn,
+.catalogue-card:hover .card-rent-btn {
+  display: flex;
+}
+
+/* ==========================================================================
+   PIXEL-BOLT "EXPLORE MORE" BUTTON (Bottom Right Desktop / Centered Mobile)
+   ========================================================================== */
+.catalogue-footer-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 36px;
+  width: 100%;
+}
+
+.pixel-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 4px;
+  font-family: 'Space Mono', 'Courier New', monospace, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.pixel-explore-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.pixel-btn-text {
+  color: #ffffff;
+  display: inline-block;
+  line-height: 1;
+}
+
+.pixel-dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================================================================
+   CAMPSITES & LUXURY STAYS SECTION (Exact Reference UI Design)
+   ========================================================================== */
+.campsites-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
+  margin: 100px auto 110px;
+}
+
+.campsites-header {
+  margin-bottom: 28px;
+}
+
+.campsites-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #0F172A;
+  letter-spacing: -1.2px;
+  margin-bottom: 4px;
+}
+
+.campsites-subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748B;
+}
+
+.campsites-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* Full-Bleed Image Card with Dark Bottom Vignette */
+.campsite-hero-card {
+  position: relative;
+  height: 410px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #111827;
+}
+
+.campsite-hero-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22);
+}
+
+.campsite-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.campsite-hero-card:hover .campsite-hero-img {
+  transform: scale(1.05);
+}
+
+/* Top-Right Circular White Heart Button */
+.campsite-heart-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F172A;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+
+.campsite-heart-btn:hover,
+.campsite-heart-btn.liked {
+  transform: scale(1.1);
+  color: #EF4444;
+}
+
+/* Bottom Vignette Overlay */
+.campsite-overlay-content {
+  position: relative;
+  z-index: 3;
+  margin-top: auto;
+  width: 100%;
+  padding: 60px 20px 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 32%, rgba(0, 0, 0, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Location Tag */
+.campsite-loc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.campsite-loc-tag svg {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Title & Price Row */
+.campsite-title-price-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.campsite-title-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.4px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  flex: 1;
+}
+
+.campsite-rate-box {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.rate-currency {
+  font-size: 22px;
+  font-weight: 800;
+  color: #D2F442;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.rate-period {
+  font-size: 13px;
+  font-weight: 600;
+  color: #D2F442;
+  opacity: 0.9;
+}
+
+/* 4 Frosted Glass Capsules */
+.campsite-capsules-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.campsite-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 6px 11px;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.campsite-glass-pill svg {
+  stroke-width: 2.2;
+}
+
+.campsites-grid.campsites-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* ==========================================================================
+   KERALA STORIES & CLIENT REVIEWS (Floating Overlapping Editorial Carousel)
+   ========================================================================== */
+.kerala-blog-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
+  margin: 100px auto 120px;
+  position: relative;
+}
+
+.kerala-blog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.kerala-blog-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #0F172A;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.kerala-nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kerala-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #EAECF0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F172A;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.kerala-arrow-btn:hover {
+  background: #0F172A;
+  color: #ffffff;
+  border-color: #0F172A;
+  transform: scale(1.06);
+}
+
+/* Showcase Container & Track */
+.kerala-showcase-container {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 24px 0 60px;
+}
+
+.kerala-showcase-container::-webkit-scrollbar {
+  display: none;
+}
+
+.kerala-showcase-track {
+  display: flex;
+  gap: 36px;
+  width: max-content;
+  align-items: flex-start;
+}
+
+/* Staggered Slides */
+.kerala-slide {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 32px;
+}
+
+.slide-tall {
+  width: 380px;
+}
+
+.slide-tall .kerala-slide-img-box {
+  height: 440px;
+}
+
+.slide-medium {
+  width: 420px;
+}
+
+.slide-medium .kerala-slide-img-box {
+  height: 460px;
+}
+
+.slide-landscape {
+  width: 480px;
+}
+
+.slide-landscape .kerala-slide-img-box {
+  height: 380px;
+}
+
+.kerala-slide-img-box {
+  width: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  background: #0F172A;
+}
+
+.kerala-bg-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.kerala-slide:hover .kerala-bg-photo {
+  transform: scale(1.05);
+}
+
+/* Floating Overlapping White Card */
+.kerala-floating-card {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px 26px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kerala-slide:hover .kerala-floating-card {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 56px rgba(0, 0, 0, 0.16);
+}
+
+/* Offset positions matching the reference image layout */
+.offset-card-1 {
+  width: 320px;
+  bottom: -28px;
+  right: -24px;
+}
+
+.offset-card-2 {
+  width: 340px;
+  bottom: -32px;
+  left: -20px;
+}
+
+.offset-card-3 {
+  width: 350px;
+  bottom: -30px;
+  right: -16px;
+}
+
+.offset-card-4 {
+  width: 330px;
+  bottom: -28px;
+  left: -20px;
+}
+
+.kerala-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.kerala-tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748B;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.kerala-icons-cluster {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kerala-circle-icon {
+  font-size: 13px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kerala-review-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.kerala-review-quote {
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.kerala-client-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #F1F5F9;
+  margin-top: 2px;
+}
+
+.kerala-client-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.kerala-client-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.kerala-client-city {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94A3B8;
+}
+
+.kerala-rating-star {
+  font-size: 12px;
+  font-weight: 800;
+  color: #F97316;
+}
+
+/* ==========================================================================
+   INTERACTIVE VEHICLE RESERVATION MODAL
+   ========================================================================== */
+.rent-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.rent-modal-overlay.open {
+  display: flex;
+  opacity: 1;
+}
+
+.rent-modal-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 36px 32px 30px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.22);
+  border: 1px solid #E2E8F0;
+  transform: scale(0.92);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rent-modal-overlay.open .rent-modal-card {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #64748B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+.modal-badge {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #4F46E5;
+  background: #EEF2FF;
+  padding: 3px 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.modal-car-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.modal-car-preview {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.modal-car-img {
+  max-width: 280px;
+  max-height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.12));
+}
+
+.modal-specs-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.modal-spec-pill {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.modal-form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #64748B;
+  text-transform: uppercase;
+}
+
+.modal-input {
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0F172A;
+  outline: none;
+}
+
+.modal-input:focus {
+  border-color: #4F46E5;
+  background: #ffffff;
+}
+
+.modal-confirm-btn {
+  width: 100%;
+  background: #5D5FEF;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 24px;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(93, 95, 239, 0.3);
+  transition: all 0.2s ease;
+}
+
+.modal-confirm-btn:hover {
+  background: #4B4DDF;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(93, 95, 239, 0.4);
+}
+
+/* ==========================================================================
+   CLEAN CARD FOOTER (Nexiron-style Theme with Subtle Hero Watermark)
+   ========================================================================== */
+.clean-card-footer {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
+  margin: 80px auto 70px;
+}
+
+.footer-card-box {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.98) 100%), 
+              url('assets/hero/tuxtor car hero.png') right center / 55% no-repeat;
+  border: 1.5px solid #EAECF0;
+  border-radius: 32px;
+  padding: 56px 60px 36px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding-bottom: 48px;
+  border-bottom: 1.5px solid #F1F5F9;
+}
+
+.footer-left-col {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footer-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #0F172A;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-brand-name {
+  font-size: 22px;
+  font-weight: 900;
+  color: #0F172A;
+  letter-spacing: -0.5px;
+}
+
+.footer-short-desc {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-right-cols {
+  display: flex;
+  gap: 64px;
+}
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-nav-heading {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.footer-clean-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-clean-links a {
+  color: #64748B;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-clean-links a:hover {
+  color: #0F172A;
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  font-size: 13.5px;
+  color: #64748B;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copy-text {
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer-legal-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-legal-bar a {
+  color: #64748B;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-bar a:hover {
+  color: #0F172A;
+}
+
+/* ==========================================================================
+   MOBILE FLOATING BOTTOM NAVIGATION BAR (Visible Only on Scroll)
+   ========================================================================== */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translate(-50%, 30px);
+  width: min(340px, calc(100% - 40px));
+  background: rgba(18, 18, 18, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 999px;
+  padding: 8px 16px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-bottom-nav.scrolled-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.mob-nav-item {
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 8px;
+  transition: color 0.2s ease;
+}
+
+.mob-nav-item.active {
+  color: #121212;
+}
+
+.mob-nav-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Desktop -> Tablet -> Mobile Exact Reference)
+   ========================================================================== */
+.hero-subtitle {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .catalogue-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .catalogue-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  body {
+    padding: 0 !important;
+    background-color: #ffffff;
+  }
+
+  .site-wrapper {
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .hero-container {
+    margin-bottom: 36px !important;
+    width: 100% !important;
+  }
+
+  /* Full Screen Background Hero Image with Clean Rounded Bottom */
+  .hero-inner {
+    min-height: 800px;
+    background-image: url('assets/hero/mobile hero image.png') !important;
+    background-size: cover;
+    background-position: center top;
+    border-radius: 0 0 36px 36px !important;
+    padding: 24px 16px 20px !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Mobile Navbar */
+  .hero-navbar {
+    padding: 0;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-pill-menu {
+    display: none !important;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .search-btn {
+    background: #00D26A !important;
+    border: none !important;
+    width: 44px;
+    height: 44px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0, 210, 106, 0.4);
+    cursor: pointer;
+  }
+
+  .search-btn svg {
+    stroke: #ffffff;
+    width: 19px;
+    height: 19px;
+  }
+
+  .user-avatar-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    display: block;
+  }
+
+  /* Mobile Hero Headline & Subtitle */
+  .hero-body {
+    padding: 10px 4px 0;
+    margin-bottom: 0;
+    display: block;
+    position: relative;
+  }
+
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.08;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1.4px;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  }
+
+  .hero-subtitle {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  }
+
+  /* Remove Pointer Hotspot on Mobile as requested */
+  .hero-floating-hotspot {
+    display: none !important;
+  }
+
+  /* Hero Floating Footer on Mobile - Aligned Higher Above */
+  .hero-floating-footer.hero-footer-centered {
+    width: 100%;
+    margin-top: 40px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .campsite-widget {
+    display: none !important;
+  }
+
+  /* Mobile White Booking Widget */
+  .booking-widget.monochrome-widget {
+    background: #ffffff !important;
+    border-radius: 28px !important;
+    padding: 20px 16px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  .mode-selector-container {
+    margin-bottom: 14px;
+  }
+
+  .mode-selector-pill {
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .mode-tab-btn {
+    border-radius: 999px !important;
+    padding: 10px 22px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid #E5E7EB;
+    background: #ffffff;
+    color: #121212;
+  }
+
+  .mode-tab-btn.active {
+    background: #121212 !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+
+  /* Search destination row */
+  .room-search-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .room-search-input-box {
+    background: #F3F4F6 !important;
+    border-radius: 16px !important;
+    padding: 12px 14px !important;
+    border: none !important;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .room-search-input {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #121212;
+    width: 100%;
+    outline: none;
+  }
+
+  .room-search-btn {
+    background: #121212 !important;
+    border-radius: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+    flex-shrink: 0;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Bottom Room Filters 5-Column Grid */
+  .room-bottom-filters {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 6px !important;
+    align-items: stretch;
+  }
+
+  .vertical-sep {
+    display: none !important;
+  }
+
+  .room-filter-col {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-col-label {
+    font-size: 9px !important;
+    font-weight: 800 !important;
+    color: #8A94A6 !important;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 0.3px;
+    display: block;
+  }
+
+  .filter-pill-btn {
+    background: #F3F4F6 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 10px 4px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    color: #121212 !important;
+  }
+
+  .room-bottom-filters .icon-green {
+    display: none !important;
+  }
+
+  .pill-arrow {
+    font-size: 8px;
+    font-weight: 800;
+    color: #64748b;
+    margin-left: 2px;
+  }
+
+  .pill-text.date-val {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+  }
+
+  /* Vehicle mode panel adjustments for mobile */
+  .vehicle-top-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vehicle-bottom-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Car Catalogue on Mobile */
+  .catalogue-section {
+    padding: 0 14px;
+    margin: 60px 0 60px;
+  }
+
+  .catalogue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogue-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .catalogue-footer-action {
+    justify-content: center !important;
+    margin-top: 28px !important;
+  }
+
+  /* Campsites on Mobile */
+  .campsites-section {
+    padding: 0 14px !important;
+    margin: 40px 0 60px !important;
+  }
+
+  .campsites-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .campsite-hero-card {
+    height: 370px !important;
+    border-radius: 24px !important;
+  }
+
+  .campsites-header {
+    margin-bottom: 20px;
+  }
+
+  /* Kerala Stories & Client Reviews on Mobile */
+  .kerala-blog-section {
+    padding: 0 14px !important;
+    margin: 40px 0 110px !important;
+  }
+
+  .kerala-showcase-container {
+    padding: 10px 0 20px !important;
+  }
+
+  .kerala-showcase-track {
+    gap: 20px !important;
+  }
+
+  .slide-tall,
+  .slide-medium,
+  .slide-landscape {
+    width: 310px !important;
+  }
+
+  .slide-tall .kerala-slide-img-box,
+  .slide-medium .kerala-slide-img-box,
+  .slide-landscape .kerala-slide-img-box {
+    height: 320px !important;
+  }
+
+  .kerala-floating-card {
+    position: relative !important;
+    width: 100% !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: 14px !important;
+    padding: 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .kerala-blog-header {
+    margin-bottom: 20px;
+  }
+
+  /* Clean Card Footer on Mobile */
+  .clean-card-footer {
+    padding: 0 14px !important;
+    margin: 40px 0 100px !important;
+  }
+
+  .footer-card-box {
+    padding: 36px 24px 24px !important;
+    border-radius: 24px !important;
+  }
+
+  .footer-main-row {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .footer-right-cols {
+    flex-wrap: wrap !important;
+    gap: 28px !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+}

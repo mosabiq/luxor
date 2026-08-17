@@ -1,0 +1,129 @@
+/* ==========================================================================
+   VehicleCard Component CSS
+   ========================================================================== */
+
+.vehicle-card {
+  width: 285px;
+  height: 385px;
+  background: #ececec;
+  border: 5px solid #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 30px 45px rgba(0, 0, 0, 0.16),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 35px 55px rgba(0, 0, 0, 0.2),
+    0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.vehicle-image-wrapper {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #dedede;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 75% center;
+  transform: scale(1.02);
+}
+
+/* Content */
+.vehicle-content {
+  padding: 13px 18px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Metadata Pills */
+.vehicle-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.meta-pill {
+  height: 19px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 7px;
+  background: #fdfdfd;
+  border: 1px solid #e2e2e2;
+  border-radius: 999px;
+  color: #333333;
+  font-size: 9.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: -0.1px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b5b5b5;
+  display: inline-block;
+}
+
+.meta-icon {
+  color: #555555;
+  display: inline-flex;
+}
+
+.shifter-icon {
+  font-size: 8.5px;
+  font-weight: 700;
+  line-height: 1;
+  color: #555555;
+}
+
+/* Title */
+.vehicle-name {
+  margin: 0;
+  color: #111111;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -1.2px;
+}
+
+/* Model */
+.vehicle-model {
+  margin: 2px 0 6px;
+  color: #8c8c8c;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.9px;
+}
+
+/* Description */
+.vehicle-description {
+  margin: 0;
+  max-width: 240px;
+  color: #6d6d6d;
+  font-size: 9.5px;
+  font-weight: 450;
+  line-height: 1.35;
+  letter-spacing: -0.1px;
+}
