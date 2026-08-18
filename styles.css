@@ -536,16 +536,18 @@ body {
    ========================================================================== */
 .vehicle-top-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1.3fr 1fr 1fr;
-  gap: 6px;
+  grid-template-columns: 1.25fr 1.25fr 1fr 1fr;
+  gap: 8px;
   margin-bottom: 10px;
+  align-items: start;
 }
 
 .veh-field-group {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
   position: relative;
+  min-width: 0;
 }
 
 .veh-field-label {
@@ -554,6 +556,11 @@ body {
   letter-spacing: 0.4px;
   color: #6b6b6b;
   text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .veh-input-pill {
@@ -561,13 +568,16 @@ body {
   background: #f8f8f8;
   border: 1px solid #e8e8e8;
   border-radius: 999px;
-  padding: 6px 10px;
+  padding: 0 10px;
+  height: 38px;
   display: flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
   box-shadow: none;
+  box-sizing: border-box;
   transition: all 0.2s ease;
+  min-width: 0;
 }
 
 .veh-input-pill:focus-within {
@@ -584,6 +594,8 @@ body {
   font-weight: 500;
   color: #111111;
   outline: none;
+  padding: 0;
+  text-overflow: ellipsis;
 }
 
 .date-display-text {
@@ -591,6 +603,8 @@ body {
   font-weight: 600;
   color: #111111;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .veh-type-trigger-btn {
@@ -1376,11 +1390,22 @@ body {
   height: 22px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.24);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
-  font-weight: 800;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.rent-arrow-circle svg {
+  display: block;
+  stroke: #ffffff;
+}
+
+.card-rent-btn:hover .rent-arrow-circle {
+  transform: translateX(3px);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 /* Hover and Active State Toggle between Specs and Rent Button */
@@ -2223,59 +2248,83 @@ body {
 }
 
 /* ==========================================================================
-   MOBILE FLOATING BOTTOM NAVIGATION BAR (Visible Only on Scroll)
+   FLOATING BOTTOM NAVIGATION BAR (Mobile View Only: Home, Campsite, Car, Blog)
    ========================================================================== */
-.mobile-bottom-nav {
-  position: fixed;
-  bottom: 22px;
-  left: 50%;
-  transform: translate(-50%, 30px);
-  width: min(340px, calc(100% - 40px));
-  background: rgba(18, 18, 18, 0.92);
+.bottom-floating-bar {
+  display: none;
+}
+
+/* Dark Main Navigation Pill (Compact & Sleek) */
+.bottom-nav-pill {
+  width: auto;
+  background: #141416;
+  border-radius: 999px;
+  padding: 4px 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-radius: 999px;
-  padding: 8px 16px;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 9999;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-bottom-nav.scrolled-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, 0);
-}
-
-.mob-nav-item {
+.bnav-item {
   color: #94A3B8;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 8px;
-  transition: color 0.2s ease;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 7px 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  box-shadow: none !important;
+  background: transparent;
+  flex: 0 0 auto;
 }
 
-.mob-nav-item.active {
+.bnav-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+.bnav-text {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.15px;
+  transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, margin-left 0.25s ease;
+  margin-left: 0;
   color: #121212;
 }
 
-.mob-nav-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #ffffff;
-  color: #121212;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+/* Active Pill State: White Background & Text Appears */
+.bnav-item.active {
+  background: #ffffff !important;
+  color: #121212 !important;
+  padding: 7px 15px !important;
+  box-shadow: none !important;
+}
+
+.bnav-item.active .bnav-icon {
+  stroke: #121212 !important;
+}
+
+.bnav-item.active .bnav-text {
+  max-width: 75px;
+  opacity: 1;
+  margin-left: 6px;
+}
+
+.bnav-item:not(.active):hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* ==========================================================================
@@ -2298,8 +2347,27 @@ body {
 }
 
 @media (max-width: 768px) {
-  .mobile-bottom-nav {
+  .bottom-floating-bar {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translate(-50%, 30px);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: calc(100vw - 32px);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: none !important;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .bottom-floating-bar.scrolled-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
   }
 
   body {

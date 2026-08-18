@@ -406,21 +406,85 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ----------------------------------------------------
-  // 12. Mobile Bottom Navigation Scroll Visibility
+  // 12. Bottom Floating Navigation (Mobile Only: Dynamic Expanding Active Tabs)
   // ----------------------------------------------------
   const mobileBottomNav = document.getElementById('mobileBottomNav');
   if (mobileBottomNav) {
+    const bnavLinks = mobileBottomNav.querySelectorAll('a[href^="#"]');
+    const sections = [
+      { id: 'home', el: document.getElementById('home') },
+      { id: 'campsites', el: document.getElementById('campsites') },
+      { id: 'vehicles', el: document.getElementById('vehicles') },
+      { id: 'stories', el: document.getElementById('stories') }
+    ];
+
+    const setActiveTab = (targetId) => {
+      bnavLinks.forEach((link) => {
+        const href = link.getAttribute('href').replace('#', '');
+        if (href === targetId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    };
+
+    let isManualClick = false;
+    let manualTimeout = null;
+
     const handleScroll = () => {
       if (window.scrollY > 80) {
         mobileBottomNav.classList.add('scrolled-visible');
       } else {
         mobileBottomNav.classList.remove('scrolled-visible');
       }
+
+      if (isManualClick) return;
+
+      const scrollPosition = window.scrollY + 250;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sec = sections[i];
+        if (sec.el && sec.el.offsetTop <= scrollPosition) {
+          setActiveTab(sec.id);
+          break;
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    // Check initial position
     handleScroll();
+
+    bnavLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href').replace('#', '');
+        const targetEl = document.getElementById(targetId);
+        
+        isManualClick = true;
+        clearTimeout(manualTimeout);
+        manualTimeout = setTimeout(() => {
+          isManualClick = false;
+        }, 1000);
+
+        setActiveTab(targetId);
+
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  // Explore more button directly navigates/scrolls to campsites section
+  const exploreBtn = document.getElementById('exploreBtn');
+  if (exploreBtn) {
+    exploreBtn.addEventListener('click', (e) => {
+      const campsiteSection = document.getElementById('campsites');
+      if (campsiteSection) {
+        e.preventDefault();
+        campsiteSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   }
 
   // ----------------------------------------------------

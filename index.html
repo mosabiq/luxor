@@ -12,7 +12,7 @@
 <body>
   <div class="site-wrapper">
     <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero-container">
+    <section class="hero-container" id="home">
       <div class="hero-inner">
         
         <!-- Top Navigation Bar -->
@@ -52,7 +52,7 @@
           </div>
         </header>
 
-        <!-- Hero Content (Headline + Subtitle + Hotspot) -->
+        <!-- Hero Content (Headline + Subtitle) -->
         <div class="hero-body">
           <div class="hero-text-content">
             <h1 class="hero-title">
@@ -60,13 +60,6 @@
               World with Us!
             </h1>
             <p class="hero-subtitle">India's premium luxury travel experience</p>
-          </div>
-
-          <!-- Pure Minimalist Floating Hero Hotspot Bubble (48px × 48px Glassmorphism Marker) -->
-          <div class="hero-floating-hotspot" id="heroPorscheHotspot" role="button" aria-label="Vehicle Hotspot">
-            <div class="hero-hotspot-glass">
-              <span class="hero-hotspot-white-dot"></span>
-            </div>
           </div>
         </div>
 
@@ -296,7 +289,7 @@
             </div>
 
             <div class="campsite-content-col">
-              <a href="#explore" class="explore-pill-btn" id="exploreBtn">
+              <a href="#campsites" class="explore-pill-btn" id="exploreBtn">
                 <span>Explore more</span>
                 <span class="compass-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -421,7 +414,9 @@
           </div>
           <button type="button" class="card-rent-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -449,7 +444,9 @@
           </div>
           <button type="button" class="card-rent-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -477,7 +474,9 @@
           </div>
           <button type="button" class="card-rent-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -505,7 +504,9 @@
           </div>
           <button type="button" class="card-rent-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -533,7 +534,9 @@
           </div>
           <button type="button" class="card-rent-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -561,7 +564,9 @@
           </div>
           <button type="button" class="card-rent-btn show-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -589,7 +594,9 @@
           </div>
           <button type="button" class="card-rent-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -617,7 +624,9 @@
           </div>
           <button type="button" class="card-rent-btn">
             <span>Rent Now</span>
-            <span class="rent-arrow-circle">→</span>
+            <span class="rent-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </span>
           </button>
         </div>
 
@@ -1123,53 +1132,59 @@
 
         <button type="button" class="modal-confirm-btn" id="modalConfirmBtn">
           <span>Confirm Reservation</span>
-          <span>→</span>
+          <span class="rent-arrow-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Floating Bottom Navigation Bar (Shown strictly on scroll down) -->
-    <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation">
-      <!-- 1. Home -->
-      <a href="#home" class="mob-nav-item active" aria-label="Home">
-        <div class="mob-nav-circle">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+    <!-- Floating Bottom Navigation Bar (Mobile View Only: Home, Campsite, Car, Blog) -->
+    <div class="bottom-floating-bar" id="mobileBottomNav" aria-label="Mobile Navigation">
+      <!-- Dark Pill Main Navigation -->
+      <nav class="bottom-nav-pill">
+        <!-- 1. Home (Active by Default) -->
+        <a href="#home" class="bnav-item active" id="bnavHome" aria-label="Home">
+          <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9.5L12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z"/>
+            <line x1="9" y1="16" x2="15" y2="16"/>
           </svg>
-        </div>
-      </a>
+          <span class="bnav-text">Home</span>
+        </a>
 
-      <!-- 2. Campsites / Camp -->
-      <a href="#campsites" class="mob-nav-item" aria-label="Campsites">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 21 12 4 5 21"></path>
-          <path d="M12 4v17"></path>
-          <path d="m5 21 7-7 7 7"></path>
-        </svg>
-      </a>
+        <!-- 2. Campsite -->
+        <a href="#campsites" class="bnav-item" id="bnavCampsites" aria-label="Campsite">
+          <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21 12 4 5 21"/>
+            <path d="M12 4v17"/>
+            <path d="m5 21 7-7 7 7"/>
+          </svg>
+          <span class="bnav-text">Campsite</span>
+        </a>
 
-      <!-- 3. Vehicles / Car -->
-      <a href="#vehicles" class="mob-nav-item" aria-label="Vehicles">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
-          <circle cx="7" cy="17" r="2"/>
-          <path d="M9 17h6"/>
-          <circle cx="17" cy="17" r="2"/>
-        </svg>
-      </a>
+        <!-- 3. Car -->
+        <a href="#vehicles" class="bnav-item" id="bnavVehicles" aria-label="Car">
+          <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+            <circle cx="7" cy="17" r="2"/>
+            <path d="M9 17h6"/>
+            <circle cx="17" cy="17" r="2"/>
+          </svg>
+          <span class="bnav-text">Car</span>
+        </a>
 
-      <!-- 4. Bookings / Receipts -->
-      <a href="#bookings" class="mob-nav-item" aria-label="Bookings">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-          <line x1="10" y1="9" x2="8" y2="9"></line>
-        </svg>
-      </a>
-    </nav>
+        <!-- 4. Blog -->
+        <a href="#stories" class="bnav-item" id="bnavBlog" aria-label="Blog">
+          <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <line x1="9" y1="7" x2="15" y2="7"/>
+            <line x1="9" y1="11" x2="14" y2="11"/>
+          </svg>
+          <span class="bnav-text">Blog</span>
+        </a>
+      </nav>
+    </div>
   </div>
 
   <script src="script.js"></script>
