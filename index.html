@@ -6,7 +6,7 @@
   <title>LUXOR | Explore the World with Us</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,6 +34,7 @@
             <a href="#home" class="nav-link active" id="navHome">Home</a>
             <a href="#vehicles" class="nav-link" id="navVehicles">Vehicles</a>
             <a href="#campsites" class="nav-link" id="navCampsites">Campsites</a>
+            <a href="#blog" class="nav-link" id="navBlog">Blog</a>
             <a href="#contact" class="nav-link" id="navContact">Contact</a>
           </nav>
 
@@ -669,10 +670,6 @@
             </div>
             <div class="campsite-title-price-row">
               <h3 class="campsite-title-text">Alleppey Backwater<br>Luxury Retreat</h3>
-              <div class="campsite-rate-box">
-                <span class="rate-currency">$145</span>
-                <span class="rate-period">/night</span>
-              </div>
             </div>
             <div class="campsite-capsules-row">
               <div class="campsite-glass-pill">
@@ -713,10 +710,6 @@
             </div>
             <div class="campsite-title-price-row">
               <h3 class="campsite-title-text">Munnar Misty Hills<br>Glamping Dome</h3>
-              <div class="campsite-rate-box">
-                <span class="rate-currency">$185</span>
-                <span class="rate-period">/night</span>
-              </div>
             </div>
             <div class="campsite-capsules-row">
               <div class="campsite-glass-pill">
@@ -757,10 +750,6 @@
             </div>
             <div class="campsite-title-price-row">
               <h3 class="campsite-title-text">Wayanad Rainforest<br>Hillstay & Treehouse</h3>
-              <div class="campsite-rate-box">
-                <span class="rate-currency">$195</span>
-                <span class="rate-period">/night</span>
-              </div>
             </div>
             <div class="campsite-capsules-row">
               <div class="campsite-glass-pill">
@@ -801,10 +790,6 @@
             </div>
             <div class="campsite-title-price-row">
               <h3 class="campsite-title-text">Vagamon Mountain<br>Pine Cliff Stay</h3>
-              <div class="campsite-rate-box">
-                <span class="rate-currency">$160</span>
-                <span class="rate-period">/night</span>
-              </div>
             </div>
             <div class="campsite-capsules-row">
               <div class="campsite-glass-pill">
@@ -845,10 +830,6 @@
             </div>
             <div class="campsite-title-price-row">
               <h3 class="campsite-title-text">Varkala Cliffside<br>Beachfront Sanctuary</h3>
-              <div class="campsite-rate-box">
-                <span class="rate-currency">$210</span>
-                <span class="rate-period">/night</span>
-              </div>
             </div>
             <div class="campsite-capsules-row">
               <div class="campsite-glass-pill">
@@ -874,148 +855,364 @@
       </div>
     </section>
 
-    <!-- ==================== KERALA STORIES & CLIENT REVIEWS (Floating Overlapping Editorial Carousel) ==================== -->
+    <!-- ==================== LUXOR FROM OUR BLOG SECTION (Exact Reference UI) ==================== -->
+    <section class="luxor-blog-section" id="blog">
+      <!-- Section Header -->
+      <div class="luxor-blog-header-wrap">
+        <div class="blog-header-left">
+          <span class="blog-section-subtitle">STORIES & INSIGHTS</span>
+          <h2 class="luxor-blog-headline">From Our Blog</h2>
+        </div>
+        <a href="#blog" class="pixel-explore-btn blog-view-all-btn">
+          <span class="pixel-btn-text">VIEW ALL</span>
+          <span class="pixel-dot"></span>
+        </a>
+      </div>
+
+      <!-- Top Row: Wide Feature Card on Left + 2 Mini Cards + Promo Box on Right -->
+      <div class="blog-top-layout-grid">
+        
+        <!-- Left Wide Featured Video Card -->
+        <article class="blog-main-hero-card">
+          <img src="assets/campsite/alleppy campsite.png" alt="Kerala Backwaters in a Houseboat" class="blog-main-hero-bg" />
+          <div class="blog-hero-overlay">
+            <!-- Center Play Icon -->
+            <div class="blog-hero-play-bubble" aria-label="Play video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff">
+                <polygon points="6 4 20 12 6 20 6 4"></polygon>
+              </svg>
+            </div>
+
+            <!-- Bottom Content Info -->
+            <div class="blog-hero-bottom-info">
+              <span class="blog-tag-pill tag-purple">VLOG</span>
+              <h3 class="blog-hero-title">Kerala Backwaters in a Houseboat: Everything You Need to Know (Vlog)</h3>
+              <p class="blog-hero-excerpt">
+                We spent two days drifting through the Kerala backwaters on a traditional kettuvallam. Here's everything — what it costs, what to eat, and what to expect.
+              </p>
+              <div class="blog-hero-meta">
+                <span>1 min read</span>
+                <span class="meta-dot">·</span>
+                <span>10 Mar 2026</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Right Side Sidebar Stack (2 Mini Cards + 1 Monochrome Promo Box) -->
+        <aside class="blog-sidebar-stack">
+          <!-- Mini Card 1 -->
+          <article class="blog-mini-card">
+            <div class="blog-mini-thumb">
+              <img src="assets/campsite/resort_villa.jpg" alt="Renting a Campervan vs. a Regular Car" class="blog-mini-img" />
+            </div>
+            <div class="blog-mini-body">
+              <span class="blog-tag-pill tag-green">TIPS & TRICKS</span>
+              <h4 class="blog-mini-title">Renting a Campervan vs. a Regular Car: Which Is Right for Your Trip?</h4>
+              <span class="blog-mini-meta">1 Mar 2026 · 1 min</span>
+            </div>
+          </article>
+
+          <!-- Mini Card 2 -->
+          <article class="blog-mini-card">
+            <div class="blog-mini-thumb">
+              <img src="assets/campsite/hillstay.png" alt="48 Hours in Hampi" class="blog-mini-img" />
+            </div>
+            <div class="blog-mini-body">
+              <span class="blog-tag-pill tag-purple">VLOG</span>
+              <h4 class="blog-mini-title">48 Hours in Hampi: A Cinematic Road Trip Vlog</h4>
+              <span class="blog-mini-meta">22 Feb 2026 · 1 min</span>
+            </div>
+          </article>
+
+          <!-- Promo Box 3 (Monochrome Black & White Theme) -->
+          <div class="blog-promo-mint-box">
+            <h4 class="blog-promo-title">Explore more stories</h4>
+            <p class="blog-promo-desc">Travel tips, destination guides, vlog highlights and more.</p>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- Bottom 3-Card Grid -->
+      <div class="blog-bottom-cards-grid">
+        <!-- Bottom Card 1 -->
+        <article class="blog-bottom-card">
+          <div class="blog-bottom-img-box">
+            <img src="assets/campsite/resort_beach.jpg" alt="7 Underrated Campsites Near Bengaluru" class="blog-bottom-img" />
+          </div>
+          <div class="blog-bottom-body">
+            <span class="blog-tag-pill tag-green">DESTINATIONS</span>
+            <h4 class="blog-bottom-title">7 Underrated Campsites Near Bengaluru for Your Next Getaway</h4>
+            <span class="blog-bottom-meta">18 Feb 2026 · 1 min read</span>
+          </div>
+        </article>
+
+        <!-- Bottom Card 2 -->
+        <article class="blog-bottom-card">
+          <div class="blog-bottom-img-box">
+            <img src="assets/campsite/mountain stay.png" alt="Coorg in the Monsoon" class="blog-bottom-img" />
+          </div>
+          <div class="blog-bottom-body">
+            <span class="blog-tag-pill tag-green">DESTINATIONS</span>
+            <h4 class="blog-bottom-title">Coorg in the Monsoon: What Nobody Tells You</h4>
+            <span class="blog-bottom-meta">5 Feb 2026 · 1 min read</span>
+          </div>
+        </article>
+
+        <!-- Bottom Card 3 -->
+        <article class="blog-bottom-card">
+          <div class="blog-bottom-img-box">
+            <img src="assets/campsite/munnar campsite.png" alt="How to Plan the Perfect Camping Weekend" class="blog-bottom-img" />
+          </div>
+          <div class="blog-bottom-body">
+            <span class="blog-tag-pill tag-green">TIPS & TRICKS</span>
+            <h4 class="blog-bottom-title">How to Plan the Perfect Camping Weekend: A Complete Beginner's Guide</h4>
+            <span class="blog-bottom-meta">28 Jan 2026 · 1 min read</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== STORIES (Reel Video Carousel) ==================== -->
     <section class="kerala-blog-section" id="stories">
       <div class="kerala-blog-header">
         <div class="kerala-blog-title-wrap">
-          <h2 class="kerala-blog-title">KERALA STORIES & CLIENT EXPERIENCES</h2>
+          <h2 class="kerala-blog-title">STORIES</h2>
+          <p class="kerala-blog-sub">Watch authentic travel reels from our explorers across God's Own Country</p>
         </div>
         
-        <!-- Minimal Carousel Arrows Navigation -->
+        <!-- Reel Navigation Capsule (Black & White Pill Style) -->
         <div class="kerala-nav-arrows">
-          <button type="button" class="kerala-arrow-btn" id="keralaPrevBtn" aria-label="Previous Stories">←</button>
-          <button type="button" class="kerala-arrow-btn" id="keralaNextBtn" aria-label="Next Stories">→</button>
+          <button type="button" class="kerala-arrow-btn" id="keralaPrevBtn" aria-label="Previous Stories">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </button>
+          <button type="button" class="kerala-arrow-btn active" id="keralaNextBtn" aria-label="Next Stories">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
         </div>
       </div>
 
-      <!-- Overlapping Floating Editorial Showcase Track -->
+      <!-- 6 Vertical Reel Video Cards Showcase Track (Pure Clean Video - No Instagram Chrome) -->
       <div class="kerala-showcase-container">
         <div class="kerala-showcase-track" id="keralaShowcaseTrack">
 
-          <!-- Slide 1: Alleppey Backwaters & Rahul & Ananya Nair Review -->
-          <div class="kerala-slide slide-tall">
-            <div class="kerala-slide-img-box">
-              <img src="assets/campsite/alleppy campsite.png" alt="Alleppey Backwater Journey" class="kerala-bg-photo" />
+          <!-- Reel 1: Alleppey Backwaters -->
+          <div class="kerala-reel-card" data-video-src="assets/video/reel00001.mp4" data-reel-title="Alleppey Backwaters & Houseboat" data-reel-loc="Alleppey, Kerala">
+            <!-- Top Frosted Glass Pill (Exact Reference UI) -->
+            <div class="reel-top-pill">
+              <span class="reel-pill-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="reel-pill-text">Alleppey Backwaters Expedition</span>
             </div>
 
-            <!-- Overlapping Floating White Review Card -->
-            <div class="kerala-floating-card offset-card-1">
-              <div class="kerala-card-top-row">
-                <span class="kerala-tag">Alleppey Expedition</span>
-                <div class="kerala-icons-cluster">
-                  <span class="kerala-circle-icon">✈️</span>
-                  <span class="kerala-circle-icon">🌐</span>
+            <!-- Video Player Box -->
+            <div class="reel-media-box">
+              <video class="reel-video-element" poster="assets/campsite/alleppy campsite.png" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/video/reel00001.mp4" type="video/mp4">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-boat-traveling-on-a-river-in-a-forest-42419-large.mp4" type="video/mp4">
+              </video>
+              
+              <!-- Hover Instagram Reels / Resume Play Icon Bubble -->
+              <div class="reel-expand-overlay">
+                <div class="reel-expand-bubble" aria-label="Play Reel">
+                  <svg class="reel-insta-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#0F172A" stroke-width="2"/>
+                    <path d="M7 2.5L10.5 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13.5 2.5L17 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2.5" y1="8" x2="21.5" y2="8" stroke="#0F172A" stroke-width="2"/>
+                    <polygon points="10,11.5 16,15 10,18.5" fill="#0F172A"/>
+                  </svg>
                 </div>
               </div>
+            </div>
 
-              <h4 class="kerala-review-title">Luxury Houseboat & Self-Drive Tour across Kerala Backwaters</h4>
-              
-              <p class="kerala-review-quote">
-                “Renting the luxury Innova from LUXOR for our Alleppey and Kumarakom family vacation was an absolute dream. Pristine vehicle, prompt support, and unmatched comfort.”
-              </p>
-
-              <div class="kerala-client-footer">
-                <div class="kerala-client-info">
-                  <span class="kerala-client-name">Rahul & Ananya Nair</span>
-                  <span class="kerala-client-city">Kochi, Kerala</span>
-                </div>
-                <span class="kerala-rating-star">★★★★★ 5.0</span>
+            <!-- Bottom Card Details -->
+            <div class="reel-card-footer">
+              <div class="reel-client-info">
+                <span class="reel-client-name">Alleppey Houseboat</span>
+                <span class="reel-client-tag">Alleppey, Kerala</span>
               </div>
             </div>
           </div>
 
-          <!-- Slide 2: Munnar Tea Gardens & Dr. Midhun Thomas Review -->
-          <div class="kerala-slide slide-medium">
-            <div class="kerala-slide-img-box">
-              <img src="assets/campsite/munnar campsite.png" alt="Munnar Tea Hills" class="kerala-bg-photo" />
+          <!-- Reel 2: Munnar Misty Cloud Trails -->
+          <div class="kerala-reel-card" data-video-src="assets/video/reel00002.mp4" data-reel-title="Munnar Misty Cloud Trails" data-reel-loc="Munnar, Kerala">
+            <div class="reel-top-pill">
+              <span class="reel-pill-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="reel-pill-text">Munnar Misty Cloud Trails</span>
             </div>
 
-            <!-- Overlapping Floating White Review Card -->
-            <div class="kerala-floating-card offset-card-2">
-              <div class="kerala-card-top-row">
-                <span class="kerala-tag">Highland Tea Trails</span>
-                <div class="kerala-icons-cluster">
-                  <span class="kerala-circle-icon">⭐</span>
-                  <span class="kerala-circle-icon">⏱️</span>
+            <div class="reel-media-box">
+              <video class="reel-video-element" poster="assets/campsite/munnar campsite.png" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/video/reel00002.mp4" type="video/mp4">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-mountain-road-with-fog-42421-large.mp4" type="video/mp4">
+              </video>
+              
+              <div class="reel-expand-overlay">
+                <div class="reel-expand-bubble" aria-label="Play Reel">
+                  <svg class="reel-insta-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#0F172A" stroke-width="2"/>
+                    <path d="M7 2.5L10.5 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13.5 2.5L17 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2.5" y1="8" x2="21.5" y2="8" stroke="#0F172A" stroke-width="2"/>
+                    <polygon points="10,11.5 16,15 10,18.5" fill="#0F172A"/>
+                  </svg>
                 </div>
               </div>
+            </div>
 
-              <h4 class="kerala-review-title">Munnar Mountain Glamping with Private Campfire & 4x4 Chauffeur</h4>
-              
-              <p class="kerala-review-quote">
-                “Waking up to the morning mist over Munnar's tea hills in LUXOR’s glamping dome was breathtaking. Flawless 4x4 booking and hospitality throughout.”
-              </p>
-
-              <div class="kerala-client-footer">
-                <div class="kerala-client-info">
-                  <span class="kerala-client-name">Dr. Midhun Thomas</span>
-                  <span class="kerala-client-city">Trivandrum, Kerala</span>
-                </div>
-                <span class="kerala-rating-star">★★★★★ 5.0</span>
+            <div class="reel-card-footer">
+              <div class="reel-client-info">
+                <span class="reel-client-name">Highland Tea Trails</span>
+                <span class="reel-client-tag">Munnar, Kerala</span>
               </div>
             </div>
           </div>
 
-          <!-- Slide 3: Varkala Cliff Coast & Fathima & Haris Review -->
-          <div class="kerala-slide slide-landscape">
-            <div class="kerala-slide-img-box">
-              <img src="assets/campsite/resort_beach.jpg" alt="Varkala Cliff Coast" class="kerala-bg-photo" />
+          <!-- Reel 3: Varkala Cliff & Sunset Waves -->
+          <div class="kerala-reel-card" data-video-src="assets/video/reel00003.mp4" data-reel-title="Varkala Cliff & Sunset Waves" data-reel-loc="Varkala, Kerala">
+            <div class="reel-top-pill">
+              <span class="reel-pill-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="reel-pill-text">Varkala Cliff & Sunset Waves</span>
             </div>
 
-            <!-- Overlapping Floating White Review Card -->
-            <div class="kerala-floating-card offset-card-3">
-              <div class="kerala-card-top-row">
-                <span class="kerala-tag">Coastal Cliffline Escape</span>
-                <div class="kerala-icons-cluster">
-                  <span class="kerala-circle-icon">📍</span>
-                  <span class="kerala-circle-icon">🌊</span>
+            <div class="reel-media-box">
+              <video class="reel-video-element" poster="assets/campsite/resort_beach.jpg" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/video/reel00003.mp4" type="video/mp4">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4" type="video/mp4">
+              </video>
+              
+              <div class="reel-expand-overlay">
+                <div class="reel-expand-bubble" aria-label="Play Reel">
+                  <svg class="reel-insta-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#0F172A" stroke-width="2"/>
+                    <path d="M7 2.5L10.5 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13.5 2.5L17 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2.5" y1="8" x2="21.5" y2="8" stroke="#0F172A" stroke-width="2"/>
+                    <polygon points="10,11.5 16,15 10,18.5" fill="#0F172A"/>
+                  </svg>
                 </div>
               </div>
+            </div>
 
-              <h4 class="kerala-review-title">Varkala Cliffside Private Villa & Coastal Sunset Self-Drive</h4>
-              
-              <p class="kerala-review-quote">
-                “Best luxury travel service in Kerala. Clean transparent car rentals, stunning coastal resorts, and 24/7 dedicated support.”
-              </p>
-
-              <div class="kerala-client-footer">
-                <div class="kerala-client-info">
-                  <span class="kerala-client-name">Fathima & Haris</span>
-                  <span class="kerala-client-city">Calicut, Kerala</span>
-                </div>
-                <span class="kerala-rating-star">★★★★★ 5.0</span>
+            <div class="reel-card-footer">
+              <div class="reel-client-info">
+                <span class="reel-client-name">Coastal Cliffline Escape</span>
+                <span class="reel-client-tag">Varkala, Kerala</span>
               </div>
             </div>
           </div>
 
-          <!-- Slide 4: Wayanad Rainforest & Siddharth & Deepa Review -->
-          <div class="kerala-slide slide-tall">
-            <div class="kerala-slide-img-box">
-              <img src="assets/campsite/hillstay.png" alt="Wayanad Rainforest Sanctuary" class="kerala-bg-photo" />
+          <!-- Reel 4: Wayanad Deep Forest Safari -->
+          <div class="kerala-reel-card" data-video-src="assets/video/reel00004.mp4" data-reel-title="Wayanad Deep Forest Safari" data-reel-loc="Wayanad, Kerala">
+            <div class="reel-top-pill">
+              <span class="reel-pill-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="reel-pill-text">Wayanad Deep Forest Safari</span>
             </div>
 
-            <!-- Overlapping Floating White Review Card -->
-            <div class="kerala-floating-card offset-card-4">
-              <div class="kerala-card-top-row">
-                <span class="kerala-tag">Rainforest Sanctuary</span>
-                <div class="kerala-icons-cluster">
-                  <span class="kerala-circle-icon">🌿</span>
-                  <span class="kerala-circle-icon">🏕️</span>
+            <div class="reel-media-box">
+              <video class="reel-video-element" poster="assets/campsite/hillstay.png" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/video/reel00004.mp4" type="video/mp4">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-driving-on-a-road-in-a-green-forest-42425-large.mp4" type="video/mp4">
+              </video>
+              
+              <div class="reel-expand-overlay">
+                <div class="reel-expand-bubble" aria-label="Play Reel">
+                  <svg class="reel-insta-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#0F172A" stroke-width="2"/>
+                    <path d="M7 2.5L10.5 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13.5 2.5L17 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2.5" y1="8" x2="21.5" y2="8" stroke="#0F172A" stroke-width="2"/>
+                    <polygon points="10,11.5 16,15 10,18.5" fill="#0F172A"/>
+                  </svg>
                 </div>
               </div>
+            </div>
 
-              <h4 class="kerala-review-title">Wayanad Deep Forest Treehouse & Off-Road Wilderness Safari</h4>
+            <div class="reel-card-footer">
+              <div class="reel-client-info">
+                <span class="reel-client-name">Rainforest Sanctuary</span>
+                <span class="reel-client-tag">Wayanad, Kerala</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reel 5: Vagamon Pine Mountain Glamping -->
+          <div class="kerala-reel-card" data-video-src="assets/video/reel00005.mp4" data-reel-title="Vagamon Pine Mountain Glamping" data-reel-loc="Vagamon, Kerala">
+            <div class="reel-top-pill">
+              <span class="reel-pill-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="reel-pill-text">Vagamon Pine Mountain Glamping</span>
+            </div>
+
+            <div class="reel-media-box">
+              <video class="reel-video-element" poster="assets/campsite/mountain stay.png" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/video/reel00005.mp4" type="video/mp4">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-mountain-landscape-under-a-blue-sky-42423-large.mp4" type="video/mp4">
+              </video>
               
-              <p class="kerala-review-quote">
-                “Pure wilderness luxury in the Western Ghats. The Pajero booking and eco-stay coordination was world-class.”
-              </p>
-
-              <div class="kerala-client-footer">
-                <div class="kerala-client-info">
-                  <span class="kerala-client-name">Siddharth & Deepa</span>
-                  <span class="kerala-client-city">Thrissur, Kerala</span>
+              <div class="reel-expand-overlay">
+                <div class="reel-expand-bubble" aria-label="Play Reel">
+                  <svg class="reel-insta-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#0F172A" stroke-width="2"/>
+                    <path d="M7 2.5L10.5 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13.5 2.5L17 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2.5" y1="8" x2="21.5" y2="8" stroke="#0F172A" stroke-width="2"/>
+                    <polygon points="10,11.5 16,15 10,18.5" fill="#0F172A"/>
+                  </svg>
                 </div>
-                <span class="kerala-rating-star">★★★★★ 5.0</span>
+              </div>
+            </div>
+
+            <div class="reel-card-footer">
+              <div class="reel-client-info">
+                <span class="reel-client-name">Pine Cliff Glamping</span>
+                <span class="reel-client-tag">Vagamon, Kerala</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reel 6: Athirappilly Waterfall Journey -->
+          <div class="kerala-reel-card" data-video-src="assets/video/reel00006.mp4" data-reel-title="Athirappilly Waterfall Journey" data-reel-loc="Athirappilly, Kerala">
+            <div class="reel-top-pill">
+              <span class="reel-pill-icon">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="reel-pill-text">Athirappilly Waterfall Journey</span>
+            </div>
+
+            <div class="reel-media-box">
+              <video class="reel-video-element" poster="assets/campsite/resort_villa.jpg" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/video/reel00006.mp4" type="video/mp4">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-a-forest-42420-large.mp4" type="video/mp4">
+              </video>
+              
+              <div class="reel-expand-overlay">
+                <div class="reel-expand-bubble" aria-label="Play Reel">
+                  <svg class="reel-insta-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#0F172A" stroke-width="2"/>
+                    <path d="M7 2.5L10.5 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13.5 2.5L17 8" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2.5" y1="8" x2="21.5" y2="8" stroke="#0F172A" stroke-width="2"/>
+                    <polygon points="10,11.5 16,15 10,18.5" fill="#0F172A"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="reel-card-footer">
+              <div class="reel-client-info">
+                <span class="reel-client-name">Athirappilly Cascades</span>
+                <span class="reel-client-tag">Thrissur, Kerala</span>
               </div>
             </div>
           </div>
@@ -1024,70 +1221,119 @@
       </div>
     </section>
 
-    <!-- ==================== CLEAN CARD FOOTER (Nexiron-style Theme) ==================== -->
-    <footer class="clean-card-footer">
-      <div class="footer-card-box">
-        
-        <div class="footer-main-row">
-          <!-- Left Brand Column -->
-          <div class="footer-left-col">
-            <a href="#home" class="footer-brand-title">
-              <span class="footer-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                </svg>
-              </span>
-              <span class="footer-brand-name">LUXOR</span>
-            </a>
-            
-            <p class="footer-short-desc">
-              LUXOR helps travelers discover luxury vehicle rentals and pristine Kerala campsites — everything you need in one place.
-            </p>
+    </div>
+    <!-- End of site-wrapper -->
+
+    <!-- ==================== LUXOR MODERN MINIMALIST DARK STUDIO FOOTER ==================== -->
+    <footer class="luxor-studio-footer" id="contact">
+      <div class="luxor-footer-inner">
+
+        <!-- Top Row: Compact Brand Logo Typography + Scroll-to-Top Button -->
+        <div class="luxor-footer-top-row">
+          <div class="luxor-footer-brand-title">
+            <span class="luxor-footer-brand-text">Luxor</span>
+            <span class="luxor-footer-reg-mark">®</span>
           </div>
 
-          <!-- Right Navigation Columns (Quick Links Only) -->
-          <div class="footer-right-cols">
+          <div class="luxor-footer-top-actions">
+            <button type="button" class="luxor-scroll-top-btn" id="luxorScrollTopBtn" aria-label="Scroll to top">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle Content Grid: Tagline + Email + Bottom-Navbar-Style Capsule on Left, 3 Compact Columns on Right -->
+        <div class="luxor-footer-mid-grid">
+          
+          <!-- Left Column: Editorial Tagline + Underlined Email + Navbar-Style Capsule -->
+          <div class="luxor-footer-intro-col">
+            <p class="luxor-footer-tagline">
+              Experience God's Own Country with premium campervans, luxury cars & handpicked nature stays.
+            </p>
+            <div class="luxor-footer-email-wrap">
+              <a href="mailto:hello@luxorkerala.com" class="luxor-footer-email-link">
+                hello@luxorkerala.com
+              </a>
+            </div>
+
+            <!-- Bottom Navbar Style Capsule (Explore Campsites & Find Vehicles & Blog) -->
+            <div class="luxor-footer-nav-capsule">
+              <a href="#campsites" class="footer-capsule-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                </svg>
+                <span>Explore Campsites</span>
+              </a>
+              <a href="#vehicles" class="footer-capsule-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                  <circle cx="7" cy="17" r="2"/>
+                  <circle cx="17" cy="17" r="2"/>
+                </svg>
+                <span>Find Vehicles</span>
+              </a>
+              <a href="#blog" class="footer-capsule-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                </svg>
+                <span>Blog</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Columns: EXPLORE, COMPANY, CONNECT -->
+          <div class="luxor-footer-nav-cols">
             
-            <div class="footer-nav-col">
-              <h4 class="footer-nav-heading">Quick Links</h4>
-              <ul class="footer-clean-links">
-                <li><a href="#vehicles">Vehicles</a></li>
+            <!-- Column 1: EXPLORE -->
+            <div class="luxor-nav-col">
+              <h4 class="luxor-col-heading">EXPLORE</h4>
+              <ul class="luxor-col-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#vehicles">Luxury Fleet</a></li>
                 <li><a href="#campsites">Campsites</a></li>
+                <li><a href="#campsites">Destinations</a></li>
                 <li><a href="#stories">Stories</a></li>
-                <li><a href="#vehicles">Bookings</a></li>
               </ul>
             </div>
 
-            <div class="footer-nav-col">
-              <h4 class="footer-nav-heading">Resources</h4>
-              <ul class="footer-clean-links">
-                <li><a href="#campsites">Itineraries</a></li>
-                <li><a href="#vehicles">Chauffeur</a></li>
-                <li><a href="tel:+919847000000">Road Assistance</a></li>
-                <li><a href="mailto:concierge@luxor.in">Concierge</a></li>
+            <!-- Column 2: COMPANY -->
+            <div class="luxor-nav-col">
+              <h4 class="luxor-col-heading">COMPANY</h4>
+              <ul class="luxor-col-list">
+                <li><a href="#blog">Travel Blog</a></li>
+                <li><a href="#contact">About Luxor</a></li>
+                <li><a href="#contact">Why Choose Us</a></li>
+                <li><a href="#contact">Careers</a></li>
               </ul>
             </div>
 
-            <div class="footer-nav-col">
-              <h4 class="footer-nav-heading">Company</h4>
-              <ul class="footer-clean-links">
-                <li><a href="#home">About</a></li>
-                <li><a href="#stories">Experiences</a></li>
-                <li><a href="#home">Contact</a></li>
-                <li><a href="#home">Partners</a></li>
+            <!-- Column 3: CONNECT -->
+            <div class="luxor-nav-col">
+              <h4 class="luxor-col-heading">CONNECT</h4>
+              <ul class="luxor-col-list">
+                <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram ↗</a></li>
+                <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube ↗</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener">X / Twitter ↗</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li>
               </ul>
             </div>
 
           </div>
         </div>
 
-        <!-- Bottom Border Row -->
-        <div class="footer-bottom-bar">
-          <p class="footer-copy-text">© 2026 LUXOR Pvt Ltd. All rights reserved.</p>
-          
-          <div class="footer-legal-bar">
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
+        <!-- Bottom Legal & Copyright Bar -->
+        <div class="luxor-footer-bottom-bar">
+          <p class="luxor-copyright-text">
+            © 2026 Luxor Travel Stays & Campervan Experiences. All rights reserved. Made for explorers.
+          </p>
+          <div class="luxor-legal-links">
+            <a href="#" class="luxor-legal-link">Privacy Policy</a>
+            <a href="#" class="luxor-legal-link">Terms of Service</a>
+            <a href="#" class="luxor-legal-link">Cookie Preferences</a>
           </div>
         </div>
 
@@ -1131,15 +1377,12 @@
         </div>
 
         <button type="button" class="modal-confirm-btn" id="modalConfirmBtn">
-          <span>Confirm Reservation</span>
-          <span class="rent-arrow-circle">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
-          </span>
+          Confirm Reservation →
         </button>
       </div>
     </div>
 
-    <!-- Floating Bottom Navigation Bar (Mobile View Only: Home, Campsite, Car, Blog) -->
+    <!-- Floating Bottom Navigation Bar (Mobile View Only: Home, Car, Campsite, Blog) -->
     <div class="bottom-floating-bar" id="mobileBottomNav" aria-label="Mobile Navigation">
       <!-- Dark Pill Main Navigation -->
       <nav class="bottom-nav-pill">
@@ -1152,17 +1395,7 @@
           <span class="bnav-text">Home</span>
         </a>
 
-        <!-- 2. Campsite -->
-        <a href="#campsites" class="bnav-item" id="bnavCampsites" aria-label="Campsite">
-          <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 21 12 4 5 21"/>
-            <path d="M12 4v17"/>
-            <path d="m5 21 7-7 7 7"/>
-          </svg>
-          <span class="bnav-text">Campsite</span>
-        </a>
-
-        <!-- 3. Car -->
+        <!-- 2. Car -->
         <a href="#vehicles" class="bnav-item" id="bnavVehicles" aria-label="Car">
           <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
@@ -1173,8 +1406,18 @@
           <span class="bnav-text">Car</span>
         </a>
 
+        <!-- 3. Campsite -->
+        <a href="#campsites" class="bnav-item" id="bnavCampsites" aria-label="Campsite">
+          <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21 12 4 5 21"/>
+            <path d="M12 4v17"/>
+            <path d="m5 21 7-7 7 7"/>
+          </svg>
+          <span class="bnav-text">Campsite</span>
+        </a>
+
         <!-- 4. Blog -->
-        <a href="#stories" class="bnav-item" id="bnavBlog" aria-label="Blog">
+        <a href="#blog" class="bnav-item" id="bnavBlog" aria-label="Blog">
           <svg class="bnav-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
@@ -1185,7 +1428,6 @@
         </a>
       </nav>
     </div>
-  </div>
 
   <script src="script.js"></script>
 </body>

@@ -4,13 +4,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // ----------------------------------------------------
-  // 1. Top Navbar Link Switching
+  // 1. Top Navbar Link Switching & Smooth Scroll
   // ----------------------------------------------------
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
-      navLinks.forEach((l) => l.classList.remove('active'));
-      link.classList.add('active');
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const targetId = href.replace('#', '');
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          navLinks.forEach((l) => l.classList.remove('active'));
+          link.classList.add('active');
+          const y = targetEl.getBoundingClientRect().top + window.pageYOffset - 24;
+          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+        }
+      }
     });
   });
 
@@ -413,8 +423,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const bnavLinks = mobileBottomNav.querySelectorAll('a[href^="#"]');
     const sections = [
       { id: 'home', el: document.getElementById('home') },
-      { id: 'campsites', el: document.getElementById('campsites') },
       { id: 'vehicles', el: document.getElementById('vehicles') },
+      { id: 'campsites', el: document.getElementById('campsites') },
+      { id: 'blog', el: document.getElementById('blog') },
       { id: 'stories', el: document.getElementById('stories') }
     ];
 
@@ -456,6 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     bnavLinks.forEach((link) => {
       link.addEventListener('click', (e) => {
+        e.preventDefault();
         const targetId = link.getAttribute('href').replace('#', '');
         const targetEl = document.getElementById(targetId);
         
@@ -463,13 +475,14 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(manualTimeout);
         manualTimeout = setTimeout(() => {
           isManualClick = false;
-        }, 1000);
+        }, 1200);
 
         setActiveTab(targetId);
 
         if (targetEl) {
-          e.preventDefault();
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const navOffset = 24;
+          const y = targetEl.getBoundingClientRect().top + window.pageYOffset - navOffset;
+          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
         }
       });
     });
@@ -482,7 +495,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const campsiteSection = document.getElementById('campsites');
       if (campsiteSection) {
         e.preventDefault();
-        campsiteSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const y = campsiteSection.getBoundingClientRect().top + window.pageYOffset - 24;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
       }
     });
   }
@@ -507,52 +521,115 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ----------------------------------------------------
-  // 14. Kerala Stories & Client Reviews Carousel Controls
+  // 14. Kerala Stories & Client Reel Video Carousel & Modal
   // ----------------------------------------------------
-  const keralaTrack = document.getElementById('keralaShowcaseTrack');
   const keralaContainer = document.querySelector('.kerala-showcase-container');
   const keralaPrevBtn = document.getElementById('keralaPrevBtn');
   const keralaNextBtn = document.getElementById('keralaNextBtn');
 
   if (keralaContainer && keralaPrevBtn && keralaNextBtn) {
     keralaPrevBtn.addEventListener('click', () => {
+      keralaPrevBtn.classList.add('active');
+      keralaNextBtn.classList.remove('active');
       keralaContainer.scrollBy({
-        left: -420,
+        left: -290,
         behavior: 'smooth'
       });
     });
 
     keralaNextBtn.addEventListener('click', () => {
+      keralaNextBtn.classList.add('active');
+      keralaPrevBtn.classList.remove('active');
       keralaContainer.scrollBy({
-        left: 420,
+        left: 290,
         behavior: 'smooth'
       });
     });
   }
 
   // ----------------------------------------------------
-  // 15. Newsletter Subscription Interaction
+  // Scroll-to-Play Video Controller (Plays videos when scrolled into view)
   // ----------------------------------------------------
-  const newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = newsletterForm.querySelector('.footer-newsletter-input');
-      const btn = newsletterForm.querySelector('.footer-newsletter-btn');
-      if (input && input.value) {
-        btn.textContent = 'Joined ✓';
-        btn.style.background = '#00D26A';
-        input.value = '';
-        input.placeholder = 'Welcome to VIP Dispatches!';
-        setTimeout(() => {
-          btn.textContent = 'Join';
-          btn.style.background = '#F97316';
-          input.placeholder = 'Enter your email...';
-        }, 4000);
-      }
+  const reelVideos = document.querySelectorAll('.reel-video-element');
+  
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          // Play video when card is visible in viewport / scrolled into view
+          video.muted = true;
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              video.muted = true;
+              video.play().catch(() => {});
+            });
+          }
+        } else {
+          // Pause when scrolled out of view to save battery and performance
+          video.pause();
+        }
+      });
+    }, {
+      threshold: 0.25,
+      rootMargin: '0px 0px 50px 0px'
+    });
+
+    reelVideos.forEach((vid) => videoObserver.observe(vid));
+  } else {
+    // Fallback if IntersectionObserver not supported: autoplay all muted
+    reelVideos.forEach((vid) => {
+      vid.muted = true;
+      vid.play().catch(() => {});
     });
   }
 
-  console.log('LUXOR Kerala Stays, Client Experiences & Footer Loaded Successfully.');
+  // Also play on card hover
+  document.querySelectorAll('.kerala-reel-card').forEach((card) => {
+    const video = card.querySelector('.reel-video-element');
+    if (video) {
+      card.addEventListener('mouseenter', () => {
+        video.play().catch(() => {});
+      });
+    }
+  });
+
+  // Direct In-Card Reel Video Play/Pause & Sound Toggle (No Popup)
+  const reelCards = document.querySelectorAll('.kerala-reel-card');
+
+  reelCards.forEach((card) => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const video = card.querySelector('.reel-video-element');
+      if (video) {
+        if (video.paused) {
+          video.play().catch(() => {});
+        } else {
+          // If already playing, toggle mute or pause
+          if (video.muted) {
+            video.muted = false;
+          } else {
+            video.pause();
+          }
+        }
+      }
+    });
+  });
+
+  // ----------------------------------------------------
+  // 15. Luxor Footer Scroll to Top Button
+  // ----------------------------------------------------
+  const luxorScrollTopBtn = document.getElementById('luxorScrollTopBtn');
+  if (luxorScrollTopBtn) {
+    luxorScrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  console.log('LUXOR Kerala Stays, Client Reel Experiences & Modern Minimalist Dark Footer Loaded Successfully.');
 });
 

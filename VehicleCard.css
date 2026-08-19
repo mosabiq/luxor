@@ -10,20 +10,16 @@
   border-radius: 25px;
   overflow: hidden;
   position: relative;
-  box-shadow:
-    0 30px 45px rgba(0, 0, 0, 0.16),
-    0 10px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
   display: flex;
   flex-direction: column;
 }
 
 .vehicle-card:hover {
   transform: translateY(-5px);
-  box-shadow:
-    0 35px 55px rgba(0, 0, 0, 0.2),
-    0 12px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 /* Image */
