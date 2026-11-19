@@ -630,6 +630,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ----------------------------------------------------
+  // 16. Blog Cards & View All Click Navigation to blog.html
+  // ----------------------------------------------------
+  const blogCards = document.querySelectorAll('.blog-main-hero-card, .blog-mini-card, .blog-bottom-card, .blog-view-all-btn');
+  blogCards.forEach((card) => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (e) => {
+      if (!e.target.closest('a') || e.target.closest('.blog-view-all-btn')) {
+        window.location.href = 'blog.html';
+      }
+    });
+  });
+
   console.log('LUXOR Kerala Stays, Client Reel Experiences & Modern Minimalist Dark Footer Loaded Successfully.');
 });
 

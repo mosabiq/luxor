@@ -1,0 +1,658 @@
+/* ==========================================================================
+   LUXOR EDITORIAL BLOG DETAIL PAGE - Full Page Kerala Travel Journal
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-main: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-page: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --accent-green: #00D26A;
+  --accent-green-dark: #00b85c;
+  --border-light: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1. Full-Width Sticky Top Header */
+.blog-fullpage-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 1000;
+}
+
+.blog-header-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.blog-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #00D26A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name-text {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #0c1e14;
+}
+
+/* Center Navigation Links */
+.blog-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f4f5;
+  padding: 4px 6px;
+  border-radius: 30px;
+}
+
+.blog-nav-link {
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #52525b;
+  padding: 7px 16px;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.blog-nav-link:hover {
+  color: #0f172a;
+}
+
+.blog-nav-link.active {
+  background: #18181b;
+  color: #ffffff;
+}
+
+/* Right Action / Back Link */
+.blog-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.blog-back-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #18181b;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-back-pill-btn:hover {
+  background: #27272a;
+  transform: translateY(-1px);
+}
+
+/* 2. Main Full-Page Article Layout */
+.blog-fullpage-main {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+/* Article Header Section */
+.blog-article-header-wrap {
+  max-width: 1080px;
+  margin: 48px auto 30px;
+  padding: 0 28px;
+}
+
+.kerala-topic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 210, 106, 0.12);
+  color: #008744;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.blog-full-headline {
+  font-size: clamp(34px, 4.2vw, 52px);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -1.2px;
+  margin-bottom: 20px;
+}
+
+.blog-lead-subtext {
+  font-size: clamp(17px, 1.8vw, 21px);
+  line-height: 1.55;
+  color: #475569;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+/* Metadata Bar */
+.blog-full-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.meta-author-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta-author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.meta-author-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.meta-author-role {
+  font-size: 12px;
+  color: #64748b;
+  display: block;
+}
+
+.meta-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.meta-label {
+  color: #64748b;
+}
+
+.meta-val {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* 3. Hero Visual Banner */
+.blog-hero-banner-container {
+  max-width: 1260px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+
+.blog-hero-banner-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.blog-hero-banner-img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-hero-caption-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), transparent);
+  color: #ffffff;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.caption-loc-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* 4. Editorial Reading Measure Body */
+.blog-reading-measure-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.blog-article-content {
+  font-size: 17.5px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.blog-article-content p {
+  margin-bottom: 26px;
+}
+
+.blog-article-content h2 {
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+  margin: 48px 0 20px;
+}
+
+.blog-article-content h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 36px 0 16px;
+}
+
+/* In-Article Kerala Dual Visual Grid */
+.in-article-visual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 36px 0;
+}
+
+.visual-grid-item {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.visual-grid-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.visual-grid-caption {
+  font-size: 12.5px;
+  color: #64748b;
+  padding: 10px 14px;
+  background: #f8fafc;
+  line-height: 1.4;
+}
+
+/* Pullquote */
+.kerala-editorial-quote {
+  background: #f8fafc;
+  border-left: 4px solid #00D26A;
+  padding: 26px 32px;
+  border-radius: 0 20px 20px 0;
+  margin: 40px 0;
+  font-size: 18.5px;
+  font-style: italic;
+  color: #0f172a;
+  line-height: 1.65;
+}
+
+.kerala-editorial-quote cite {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  font-style: normal;
+  color: #64748b;
+  margin-top: 14px;
+}
+
+/* Kerala Route Highlights Box */
+.kerala-routes-box {
+  background: #f1f5f9;
+  border-radius: 22px;
+  padding: 30px 34px;
+  margin: 40px 0;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.kerala-routes-box h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.route-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.route-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.route-step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #00D26A;
+  color: #0c1e14;
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.route-step-content strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.route-step-content p {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Luxor CTA Section */
+.kerala-luxor-cta-card {
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 38px 44px;
+  margin: 50px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.cta-left h3 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.cta-left p {
+  color: #94a3b8;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cta-right-btns {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cta-luxor-btn-primary {
+  background: #00D26A;
+  color: #0c1e14;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 13px 24px;
+  border-radius: 12px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-luxor-btn-primary:hover {
+  background: #00b85c;
+  transform: translateY(-2px);
+}
+
+.cta-luxor-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 13px 20px;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.cta-luxor-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 5. Related Stories Section */
+.blog-related-stories-section {
+  max-width: 1260px;
+  margin: 60px auto 0;
+  padding: 40px 24px 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.related-section-header {
+  margin-bottom: 28px;
+}
+
+.related-section-header h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.related-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.related-card {
+  background: #f8fafc;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+}
+
+.related-img-wrap {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.related-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.related-card:hover .related-img {
+  transform: scale(1.05);
+}
+
+.related-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.related-tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: #00D26A;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.related-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+/* 6. Full Luxor Footer */
+.blog-full-footer {
+  margin-top: 80px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 60px 24px 30px;
+}
+
+.blog-footer-inner {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.blog-footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog-footer-brand {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+
+.blog-footer-tagline {
+  color: #94a3b8;
+  font-size: 14.5px;
+}
+
+.blog-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  font-size: 13px;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.blog-footer-bottom a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.blog-footer-bottom a:hover {
+  color: #ffffff;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 860px) {
+  .blog-nav-menu {
+    display: none;
+  }
+
+  .in-article-visual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kerala-luxor-cta-card {
+    padding: 26px 24px;
+  }
+
+  .blog-article-header-wrap {
+    margin-top: 32px;
+    padding: 0 18px;
+  }
+
+  .blog-reading-measure-wrap {
+    padding: 0 18px;
+  }
+}
